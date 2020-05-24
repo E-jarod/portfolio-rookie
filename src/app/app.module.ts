@@ -7,6 +7,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatSliderModule } from '@angular/material/slider';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { MatSliderModule } from '@angular/material/slider';
     AppRoutingModule,
     NgbModule,
     BrowserAnimationsModule,
-    MatSliderModule
+    MatSliderModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
