@@ -1,27 +1,51 @@
-# Portfolio
+# Portfolio | EJILANE Jarod
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.6.
+Portfolio made in angular 9 and providing a technological watch on angular. This is basically intended for my academic project (PP, BTS SIO, option SLAM). I just wished to learn deeply Angular through this school environment, so I made this. Hope it can be useful.
 
-## Development server
+## See the website
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Navigate to [this url](https://e-jarod.github.io/portfolio/). Thanks for seeing and sharing.
 
-## Code scaffolding
+## [Dev] Run the app
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Install the dependencies
 
-## Build
+A classic angular project. So I am using npm and angular CLI.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+`npm i`
 
-## Running unit tests
+### Serve the app
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Using basic angular's `http://localhost:4200/` is a problem when we want to run various apps at the same time. I personally prefer to assign a specific port to serve my app.
 
-## Running end-to-end tests
+`ng serve ng serve --port 7777 --poll=2000`
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+(Or simply, via a npm script in package.json...)
 
-## Further help
+`npm start`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+When navigating to localhost:7777, we can see the home page.
+
+## [Pre-prod] Test and run the app
+
+_..._
+
+### Build the app
+
+_..._
+
+### Serve with Node.js
+
+_..._
+
+## [Prod] Deploy on Gitub Pages
+
+I use `npx angular-cli-ghpages --dir=dist/portfolio` for deploy and update my portfolio.
+On Linux/UNIX system, I need to use `sudo` before this command.
+
+On linux:
+`sudo npx angular-cli-ghpages --dir=dist/portfolio`
+
+(But I prefer...)
+
+`sudo npm run ngh`
