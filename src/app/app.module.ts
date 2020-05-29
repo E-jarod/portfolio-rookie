@@ -20,6 +20,7 @@ import { EducationComponent } from './component/education/education.component';
 import { SkillsComponent } from './component/skills/skills.component';
 import { ContactComponent } from './component/contact/contact.component';
 import { TechWatchComponent } from './component/tech-watch/tech-watch.component';
+import { ErrorComponent } from './component/error/error.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { TechWatchComponent } from './component/tech-watch/tech-watch.component'
     EducationComponent,
     SkillsComponent,
     ContactComponent,
-    TechWatchComponent
+    TechWatchComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
