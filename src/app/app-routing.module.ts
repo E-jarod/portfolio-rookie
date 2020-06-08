@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { HomeComponent } from './component/home/home.component';
-import { CvComponent } from './component/cv/cv.component';
-import { SkillsComponent } from './component/skills/skills.component';
-import { EducationComponent } from './component/education/education.component';
-import { TechWatchComponent } from './component/tech-watch/tech-watch.component';
-import { ContactComponent } from './component/contact/contact.component';
-import { ErrorComponent } from './component/error/error.component';
+import { HomeComponent } from './home/home.component';
+import { ErrorComponent } from './error/error.component';
+import { CvComponent } from './cv/cv.component';
+import { SkillsComponent } from './skills/skills.component';
+import { SchoolComponent } from './school/school.component';
+import { TechWatchComponent } from './tech-watch/tech-watch.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 const routes: Routes = [
@@ -29,8 +29,8 @@ const routes: Routes = [
     component: SkillsComponent
   },
   {
-    path: 'education',
-    component: EducationComponent
+    path: 'school',
+    component: SchoolComponent
   },
   {
     path: 'tech-watch',

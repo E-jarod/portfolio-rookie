@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -14,25 +13,27 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import { HomeComponent } from './component/home/home.component';
-import { CvComponent } from './component/cv/cv.component';
-import { EducationComponent } from './component/education/education.component';
-import { SkillsComponent } from './component/skills/skills.component';
-import { ContactComponent } from './component/contact/contact.component';
-import { TechWatchComponent } from './component/tech-watch/tech-watch.component';
-import { ErrorComponent } from './component/error/error.component';
+
+import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
+import { ErrorComponent } from './error/error.component';
+import { CvComponent } from './cv/cv.component';
+import { SkillsComponent } from './skills/skills.component';
+import { SchoolComponent } from './school/school.component';
+import { TechWatchComponent } from './tech-watch/tech-watch.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RootNavComponent,
     HomeComponent,
+    ErrorComponent,
     CvComponent,
-    EducationComponent,
     SkillsComponent,
-    ContactComponent,
+    SchoolComponent,
     TechWatchComponent,
-    ErrorComponent
+    ContactComponent
   ],
   imports: [
     BrowserModule,
