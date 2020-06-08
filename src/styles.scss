@@ -1,4 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+@import url(https://fonts.googleapis.com/css2?family=Oswald&display=swap);
+
+@function headings($from:1, $to:6) {
+  @if $from == $to {
+      @return 'h#{$from}';
+  } @else {
+      @return 'h#{$from},' + headings($from+1, $to);
+  }
+}
+
+#{headings(1,6)} {
+  font-family: "Oswald", sans-serif !important;
+}
 
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
