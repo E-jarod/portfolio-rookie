@@ -1,0 +1,37 @@
+@import url(https://fonts.googleapis.com/css2?family=Oswald&display=swap);
+
+/* Maintenance */
+* {
+  font-family: "Oswald", sans-serif !important;
+}
+
+.maintenance {
+  height: 80%;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  .maintenance-title {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .title {
+      font-size: 3rem;
+      margin: 0px;
+      line-height: 100%;
+      text-align: center;
+    }
+  }
+  .maintenance-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60%;
+    img {
+      width: 50%;
+      height: 100%;
+    }
+  }
+}
