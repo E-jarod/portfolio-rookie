@@ -50,6 +50,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 import { AppRoutingModule } from './app-routing.module';
 
 // Components
@@ -128,6 +130,7 @@ import { ContactComponent } from './contact/contact.component';
     BrowserModule,
     BrowserAnimationsModule,
     FontAwesomeModule,
+    FlexLayoutModule,
     AppRoutingModule,
   ],
   providers: [],

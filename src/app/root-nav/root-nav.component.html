@@ -1,3 +1,7 @@
+<!-- @TODO: image dans la sidebar, 2/3 ou 3/4 sur une couleur, le reste sur une autre pour la délimitation.
+Navbar avec tous les liens vers les autres réseaux etc.
+Choix de langue fr/en.
+ -->
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #drawer class="sidenav" fixedInViewport
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
@@ -15,16 +19,16 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-      <span>Ejilane Jarod | Portfolio</span>
+    <mat-toolbar color="primary" fxLayout="row">
+        <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()"
+          *ngIf="isHandset$ | async">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+        <span>Ejilane Jarod | Portfolio</span>
     </mat-toolbar>
 
     <!-- Add Content Here -->
