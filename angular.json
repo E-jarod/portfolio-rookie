@@ -84,9 +84,7 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/porfolio/src/**/*.ts"
-            ]
+            "lintFilePatterns": ["apps/porfolio/src/**/*.ts"]
           }
         },
         "test": {
@@ -119,9 +117,7 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/porfolio-e2e/**/*.{js,ts}"
-            ]
+            "lintFilePatterns": ["apps/porfolio-e2e/**/*.{js,ts}"]
           }
         }
       }
