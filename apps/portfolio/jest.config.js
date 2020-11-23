@@ -1,5 +1,5 @@
 module.exports = {
-  displayName: 'porfolio',
+  displayName: 'portfolio',
   preset: '../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
@@ -14,7 +14,7 @@ module.exports = {
       },
     },
   },
-  coverageDirectory: '../../coverage/apps/porfolio',
+  coverageDirectory: '../../coverage/apps/portfolio',
   snapshotSerializers: [
     'jest-preset-angular/build/AngularNoNgAttributesSnapshotSerializer.js',
     'jest-preset-angular/build/AngularSnapshotSerializer.js',

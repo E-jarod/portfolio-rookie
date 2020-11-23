@@ -1,15 +1,15 @@
 {
   "version": 1,
   "projects": {
-    "porfolio": {
+    "portfolio": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
         }
       },
-      "root": "apps/porfolio",
-      "sourceRoot": "apps/porfolio/src",
+      "root": "apps/portfolio",
+      "sourceRoot": "apps/portfolio/src",
       "prefix": "portfolio",
       "architect": {
         "build": {
@@ -18,19 +18,19 @@
             "customWebpackConfig": {
               "path": "webpack.config.js"
             },
-            "outputPath": "dist/apps/porfolio",
-            "index": "apps/porfolio/src/index.html",
-            "main": "apps/porfolio/src/main.ts",
-            "polyfills": "apps/porfolio/src/polyfills.ts",
-            "tsConfig": "apps/porfolio/tsconfig.app.json",
+            "outputPath": "dist/apps/portfolio",
+            "index": "apps/portfolio/src/index.html",
+            "main": "apps/portfolio/src/main.ts",
+            "polyfills": "apps/portfolio/src/polyfills.ts",
+            "tsConfig": "apps/portfolio/tsconfig.app.json",
             "aot": true,
             "assets": [
-              "apps/porfolio/src/favicon.ico",
-              "apps/porfolio/src/assets"
+              "apps/portfolio/src/favicon.ico",
+              "apps/portfolio/src/assets"
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "apps/porfolio/src/styles.scss"
+              "apps/portfolio/src/styles.scss"
             ],
             "scripts": []
           },
@@ -38,8 +38,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "apps/porfolio/src/environments/environment.ts",
-                  "with": "apps/porfolio/src/environments/environment.prod.ts"
+                  "replace": "apps/portfolio/src/environments/environment.ts",
+                  "with": "apps/portfolio/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -67,57 +67,57 @@
         "serve": {
           "builder": "@angular-builders/custom-webpack:dev-server",
           "options": {
-            "browserTarget": "porfolio:build"
+            "browserTarget": "portfolio:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "porfolio:build:production"
+              "browserTarget": "portfolio:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "porfolio:build"
+            "browserTarget": "portfolio:build"
           }
         },
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/porfolio/src/**/*.ts"]
+            "lintFilePatterns": ["apps/portfolio/src/**/*.ts"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
-            "jestConfig": "apps/porfolio/jest.config.js",
+            "jestConfig": "apps/portfolio/jest.config.js",
             "passWithNoTests": true
           }
         }
       }
     },
-    "porfolio-e2e": {
-      "root": "apps/porfolio-e2e",
-      "sourceRoot": "apps/porfolio-e2e/src",
+    "portfolio-e2e": {
+      "root": "apps/portfolio-e2e",
+      "sourceRoot": "apps/portfolio-e2e/src",
       "projectType": "application",
       "architect": {
         "e2e": {
           "builder": "@nrwl/cypress:cypress",
           "options": {
-            "cypressConfig": "apps/porfolio-e2e/cypress.json",
-            "tsConfig": "apps/porfolio-e2e/tsconfig.e2e.json",
-            "devServerTarget": "porfolio:serve"
+            "cypressConfig": "apps/portfolio-e2e/cypress.json",
+            "tsConfig": "apps/portfolio-e2e/tsconfig.e2e.json",
+            "devServerTarget": "portfolio:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "porfolio:serve:production"
+              "devServerTarget": "portfolio:serve:production"
             }
           }
         },
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/porfolio-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": ["apps/portfolio-e2e/**/*.{js,ts}"]
           }
         }
       }
@@ -146,5 +146,5 @@
       "unitTestRunner": "jest"
     }
   },
-  "defaultProject": "porfolio"
+  "defaultProject": "portfolio"
 }

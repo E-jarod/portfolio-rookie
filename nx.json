@@ -23,12 +23,12 @@
     }
   },
   "projects": {
-    "porfolio": {
+    "portfolio": {
       "tags": []
     },
-    "porfolio-e2e": {
+    "portfolio-e2e": {
       "tags": [],
-      "implicitDependencies": ["porfolio"]
+      "implicitDependencies": ["portfolio"]
     }
   }
 }
