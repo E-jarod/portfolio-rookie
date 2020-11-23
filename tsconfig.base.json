@@ -1,6 +1,9 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
     "rootDir": ".",
     "sourceMap": true,
     "declaration": false,
@@ -16,6 +19,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {}
+  },
+  "angularCompilerOptions": {
+    "strictInjectionParameters": true,
+    "strictTemplates": true
   },
   "exclude": ["node_modules", "tmp"]
 }
