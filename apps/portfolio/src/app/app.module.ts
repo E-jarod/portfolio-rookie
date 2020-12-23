@@ -14,14 +14,14 @@ import { CdkTableModule } from '@angular/cdk/table';
 import { CdkTreeModule } from '@angular/cdk/tree';
 
 // Material modules
-import { MatAutocompleteModule } from '@angular/material/autocomplete';
-import { MatBadgeModule } from '@angular/material/badge';
-import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
+// import { MatAutocompleteModule } from '@angular/material/autocomplete';
+// import { MatBadgeModule } from '@angular/material/badge';
+// import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { MatButtonModule } from '@angular/material/button';
-import { MatButtonToggleModule } from '@angular/material/button-toggle';
+// import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatCardModule } from '@angular/material/card';
-import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatChipsModule } from '@angular/material/chips';
+// import { MatCheckboxModule } from '@angular/material/checkbox';
+// import { MatChipsModule } from '@angular/material/chips';
 import {
   MatNativeDateModule,
   MatRippleModule,
