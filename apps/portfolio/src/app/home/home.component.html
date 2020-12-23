@@ -1,12 +1,96 @@
 <div class="grid-container">
-  <h1 class="mat-h1">Dashboard</h1>
-  <mat-grid-list cols="2" rowHeight="350px">
-    <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
+  <h1 class="mat-h1">Acceuil</h1>
+
+  <!-- @TODO: Github Contributions API -->
+  <mat-grid-list cols="1" rowHeight="320px">
+    <mat-grid-tile
+      class="border-red-500 shadow-2xl center"
+      colspan="1"
+      rowspan="2"
+    >
+      <mat-card class="flex flex-col justify-start w-full h-full">
+        <mat-card-header class="py-3 bg-blue-50 rounded-xl">
+          <div class="flex flex-start">
+            <div
+              class="flex-shrink-0 w-20 h-20 mr-3 bg-right bg-cover rounded-full pp"
+              [style.backgroundImage]="
+                'url(\'assets/eren_freedom.jpg\')'
+              "
+            ></div>
+            <div>
+              <mat-card-title class="text-2xl font-bold oswald"
+                >E-jarod</mat-card-title
+              >
+              <mat-card-subtitle class="text-2xl oswald"
+                >Freelance développeur
+                <b class="text-red-500">Angular</b> &
+                <b class="text-blue-500">Flutter</b>
+              </mat-card-subtitle>
+            </div>
+          </div>
+        </mat-card-header>
+        <div
+          class="flex flex-col justify-between xl:items-center xl:flex-row xl:mt-8"
+        >
+          <img
+            mat-card-image
+            class="flex-grow-0 flex-shrink-0 max-h-full mx-auto rounded-3xl w-60 xl:max-w-md sm:w-72 xl:w-80"
+            src="assets/meBeach.jpg"
+            alt="EJILANE Jarod"
+          />
+          <mat-card-content
+            class="flex justify-center flex-grow rounded-lg"
+          >
+            <mat-list
+              class="flex-grow max-w-2xl p-3 rounded-xl bg-red-50 xl:ml-8"
+            >
+              <mat-list-item>
+                <div class="flex items-center justify-center w-full">
+                  <p class="m-0 text-lg w-60 oswald">Angular</p>
+                  <mat-progress-bar
+                    [color]="'warn'"
+                    [mode]="'buffer'"
+                    [value]="50"
+                    [bufferValue]="90"
+                  >
+                  </mat-progress-bar>
+                </div>
+              </mat-list-item>
+              <mat-list-item>
+                <div class="flex items-center justify-center w-full">
+                  <p class="m-0 text-lg w-60 oswald">Flutter</p>
+                  <mat-progress-bar
+                    [color]="'primary'"
+                    [mode]="'buffer'"
+                    [value]="20"
+                    [bufferValue]="80"
+                  >
+                  </mat-progress-bar>
+                </div>
+              </mat-list-item>
+            </mat-list>
+          </mat-card-content>
+        </div>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+  <mat-grid-list cols="3" rowHeight="350px">
+    <mat-grid-tile
+      *ngFor="let card of cards | async"
+      [colspan]="card.cols"
+      [rowspan]="card.rows"
+    >
       <mat-card class="dashboard-card">
         <mat-card-header>
           <mat-card-title>
-            {{card.title}}
-            <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+            {{ card.title }}
+            <button
+              mat-icon-button
+              class="more-button"
+              [matMenuTriggerFor]="menu"
+              aria-label="Toggle menu"
+            >
               <mat-icon>more_vert</mat-icon>
             </button>
             <mat-menu #menu="matMenu" xPosition="before">
@@ -16,7 +100,7 @@
           </mat-card-title>
         </mat-card-header>
         <mat-card-content class="dashboard-card-content">
-          <div>Card Content Here</div>
+          <div>{{ card.content }}</div>
         </mat-card-content>
       </mat-card>
     </mat-grid-tile>

@@ -26,31 +26,34 @@ import {
   MatNativeDateModule,
   MatRippleModule,
 } from '@angular/material/core';
-import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatDialogModule } from '@angular/material/dialog';
-import { MatDividerModule } from '@angular/material/divider';
-import { MatExpansionModule } from '@angular/material/expansion';
+// import { MatDatepickerModule } from '@angular/material/datepicker';
+// import { MatDialogModule } from '@angular/material/dialog';
+// import { MatDividerModule } from '@angular/material/divider';
+// import { MatExpansionModule } from '@angular/material/expansion';
 import { MatGridListModule } from '@angular/material/grid-list';
-import { MatIconModule } from '@angular/material/icon';
-import { MatInputModule } from '@angular/material/input';
+import {
+  MatIconModule,
+  MatIconRegistry,
+} from '@angular/material/icon';
+// import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
-import { MatPaginatorModule } from '@angular/material/paginator';
+// import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { MatRadioModule } from '@angular/material/radio';
-import { MatSelectModule } from '@angular/material/select';
+// import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+// import { MatRadioModule } from '@angular/material/radio';
+// import { MatSelectModule } from '@angular/material/select';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { MatSliderModule } from '@angular/material/slider';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { MatSortModule } from '@angular/material/sort';
-import { MatStepperModule } from '@angular/material/stepper';
-import { MatTableModule } from '@angular/material/table';
-import { MatTabsModule } from '@angular/material/tabs';
+// import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+// import { MatSliderModule } from '@angular/material/slider';
+// import { MatSnackBarModule } from '@angular/material/snack-bar';
+// import { MatSortModule } from '@angular/material/sort';
+// import { MatStepperModule } from '@angular/material/stepper';
+// import { MatTableModule } from '@angular/material/table';
+// import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatTooltipModule } from '@angular/material/tooltip';
-import { MatTreeModule } from '@angular/material/tree';
+// import { MatTooltipModule } from '@angular/material/tooltip';
+// import { MatTreeModule } from '@angular/material/tree';
 
 import { AppComponent } from './app.component';
 import { RootNavigationComponent } from './root-navigation/root-navigation.component';
@@ -62,6 +65,14 @@ import { ContactComponent } from './contact/contact.component';
 import { CoursesComponent } from './courses/courses.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ErrorComponent } from './error/error.component';
+import {
+  FaIconLibrary,
+  FontAwesomeModule,
+} from '@fortawesome/angular-fontawesome';
+import {
+	faGithub,
+	faLinkedin, faLinkedinIn, faTwitter,
+} from '@fortawesome/free-brands-svg-icons';
 
 const CdkModules = [
   LayoutModule,
@@ -76,41 +87,41 @@ const CdkModules = [
 ];
 
 const MaterialModule = [
-  MatAutocompleteModule,
-  MatBadgeModule,
-  MatBottomSheetModule,
+  // MatAutocompleteModule,
+  // MatBadgeModule,
+  // MatBottomSheetModule,
   MatButtonModule,
-  MatButtonToggleModule,
+  // MatButtonToggleModule,
   MatCardModule,
-  MatCheckboxModule,
-  MatChipsModule,
-  MatNativeDateModule,
+  // MatCheckboxModule,
+  // MatChipsModule,
+  // MatNativeDateModule,
   MatRippleModule,
-  MatDatepickerModule,
-  MatDialogModule,
-  MatDividerModule,
-  MatExpansionModule,
+  // MatDatepickerModule,
+  // MatDialogModule,
+  // MatDividerModule,
+  // MatExpansionModule,
   MatGridListModule,
   MatIconModule,
-  MatInputModule,
+  // MatInputModule,
   MatListModule,
   MatMenuModule,
-  MatPaginatorModule,
+  // MatPaginatorModule,
   MatProgressBarModule,
-  MatProgressSpinnerModule,
-  MatRadioModule,
-  MatSelectModule,
+  // MatProgressSpinnerModule,
+  // MatRadioModule,
+  // MatSelectModule,
   MatSidenavModule,
-  MatSlideToggleModule,
-  MatSliderModule,
-  MatSnackBarModule,
-  MatSortModule,
-  MatStepperModule,
-  MatTableModule,
-  MatTabsModule,
+  // MatSlideToggleModule,
+  // MatSliderModule,
+  // MatSnackBarModule,
+  // MatSortModule,
+  // MatStepperModule,
+  // MatTableModule,
+  // MatTabsModule,
   MatToolbarModule,
-  MatTooltipModule,
-  MatTreeModule,
+  // MatTooltipModule,
+  // MatTreeModule,
 ];
 
 @NgModule({
@@ -129,10 +140,17 @@ const MaterialModule = [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-		...CdkModules,
+    ...CdkModules,
     ...MaterialModule,
+    FontAwesomeModule,
   ],
-  providers: [],
+  providers: [MatIconRegistry],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule {
+  fontAwesomeIcons = [faGithub, faLinkedin, faLinkedinIn, faTwitter];
+
+  constructor(library: FaIconLibrary) {
+    library.addIcons(...this.fontAwesomeIcons);
+  }
+}
