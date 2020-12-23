@@ -1,31 +1,29 @@
-<div class="grid-container">
-  <h1 class="mat-h1">Compétences</h1>
+<h1 class="mat-h1">Compétences</h1>
 
-  <mat-grid-list cols="4" rowHeight="100px">
-    <mat-grid-tile
-      *ngFor="let skill of skills | async"
-      [colspan]="skill.cols"
-      [rowspan]="skill.cols"
-    >
-      <mat-card class="dashboard-card" style="position: absolute;">
-        <mat-card-header>
-          <mat-card-title>
-            <p class="m-0 text-lg w-60 oswald">
-							{{ skill.title }}
-							<!-- <fa-icon [icon]="['fab', 'angular']"></fa-icon> -->
-						</p>
-          </mat-card-title>
-        </mat-card-header>
-        <mat-card-content class="dashboard-card-content">
-          <mat-progress-bar
-            [color]="skill.skill.color"
-            [mode]="'buffer'"
-            [value]="skill.skill.value"
-            [bufferValue]="skill.skill.bufferValue"
-          >
-          </mat-progress-bar>
-        </mat-card-content>
-      </mat-card>
-    </mat-grid-tile>
-  </mat-grid-list>
-</div>
+<mat-grid-list cols="4" rowHeight="100px">
+  <mat-grid-tile
+    *ngFor="let skill of skills | async"
+    [colspan]="skill.cols"
+    [rowspan]="skill.cols"
+  >
+    <mat-card class="dashboard-card" style="position: absolute">
+      <mat-card-header>
+        <mat-card-title>
+          <p class="m-0 text-lg w-60 oswald">
+            {{ skill.title }}
+            <!-- <fa-icon [icon]="['fab', 'angular']"></fa-icon> -->
+          </p>
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content class="dashboard-card-content">
+        <mat-progress-bar
+          [color]="skill.skill.color"
+          [mode]="'buffer'"
+          [value]="skill.skill.value"
+          [bufferValue]="skill.skill.bufferValue"
+        >
+        </mat-progress-bar>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
