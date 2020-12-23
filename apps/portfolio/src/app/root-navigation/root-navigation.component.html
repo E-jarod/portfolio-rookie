@@ -1,47 +1,81 @@
 <mat-sidenav-container class="sidenav-container">
-	<mat-sidenav #drawer class="sidenav" fixedInViewport
-							 [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-							 [mode]="(isHandset$ | async) ? 'over' : 'side'"
-							 [opened]="(isHandset$ | async) === false">
-		<mat-toolbar>Menu</mat-toolbar>
-		<mat-nav-list>
-			<a mat-list-item [routerLink]="['/home']">Accueil</a>
-			<a mat-list-item [routerLink]="['/cv']">CV</a>
-			<a mat-list-item [routerLink]="['/skills']">Compétences</a>
-			<a mat-list-item [routerLink]="['/courses']">Formations</a>
-			<a mat-list-item [routerLink]="['/tech-watch']">Veille</a>
-			<a mat-list-item [routerLink]="['/contact']">Contact</a>
-		</mat-nav-list>
-	</mat-sidenav>
-	<mat-sidenav-content>
-		<mat-toolbar class="flex justify-between" color="primary">
-			<div>
-				<button
-					type="button"
-					aria-label="Toggle sidenav"
-					mat-icon-button
-					(click)="drawer.toggle()"
-					*ngIf="isHandset$ | async">
-					<mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-				</button>
-				<span class="font-bold oswald">EJILANE Jarod | Portfolio</span>
-			</div>
-			<div>
-				<a mat-icon-button class="mr-4" href="https://github.com/E-jarod" target="_blank" rel="noopener noreferer">
-					<fa-icon class="text-3xl text-white" [icon]="['fab', 'github']"></fa-icon>
-				</a>
-				<a mat-icon-button class="mr-4" href="https://www.linkedin.com/in/e-jarod/" target="_blank"
-					 rel="noopener noreferer">
-					<fa-icon class="text-3xl text-white" [icon]="['fab', 'linkedin']"></fa-icon>
-				</a>
-				<a mat-icon-button class="mr-4" href="https://twitter.com/E_jarod7" target="_blank" rel="noopener noreferer">
-					<fa-icon class="text-3xl text-white" [icon]="['fab', 'twitter']"></fa-icon>
-				</a>
-			</div>
-		</mat-toolbar>
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="(isHandset$ | async) === false"
+  >
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item [routerLink]="['/home']">Accueil</a>
+      <a mat-list-item [routerLink]="['/cv']">CV</a>
+      <a mat-list-item [routerLink]="['/skills']">Compétences</a>
+      <a mat-list-item [routerLink]="['/courses']">Formations</a>
+      <a mat-list-item [routerLink]="['/tech-watch']">Veille</a>
+      <a mat-list-item [routerLink]="['/contact']">Contact</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar class="flex justify-between" color="primary">
+      <div>
+        <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()"
+          *ngIf="isHandset$ | async"
+        >
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+        <span class="font-bold oswald"
+          >EJILANE Jarod | Portfolio</span
+        >
+      </div>
+      <div>
+        <a
+          mat-icon-button
+          class="mr-4"
+          href="https://github.com/E-jarod"
+          target="_blank"
+          rel="noopener noreferer"
+        >
+          <fa-icon
+            class="text-3xl text-white"
+            [icon]="['fab', 'github']"
+          ></fa-icon>
+        </a>
+        <a
+          mat-icon-button
+          class="mr-4"
+          href="https://www.linkedin.com/in/e-jarod/"
+          target="_blank"
+          rel="noopener noreferer"
+        >
+          <fa-icon
+            class="text-3xl text-white"
+            [icon]="['fab', 'linkedin']"
+          ></fa-icon>
+        </a>
+        <a
+          mat-icon-button
+          class="mr-4"
+          href="https://twitter.com/E_jarod7"
+          target="_blank"
+          rel="noopener noreferer"
+        >
+          <fa-icon
+            class="text-3xl text-white"
+            [icon]="['fab', 'twitter']"
+          ></fa-icon>
+        </a>
+      </div>
+    </mat-toolbar>
 
-		<!-- Add Content Here -->
-		<ng-content></ng-content>
-
-	</mat-sidenav-content>
+    <!-- Add Content Here -->
+    <div class="grid-container">
+      <ng-content></ng-content>
+    </div>
+  </mat-sidenav-content>
 </mat-sidenav-container>
