@@ -28,7 +28,7 @@
             "assets": [
               "apps/portfolio/src/favicon.ico",
 							"apps/portfolio/src/assets",
-							"apps/portfolio/src/_redirect"
+							"apps/portfolio/src/_redirects"
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
