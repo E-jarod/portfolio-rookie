@@ -70,6 +70,7 @@ import {
   FontAwesomeModule,
 } from '@fortawesome/angular-fontawesome';
 import {
+	faAngular,
   faGithub,
   faLinkedin,
   faLinkedinIn,
@@ -163,7 +164,8 @@ export class AppModule {
     faLinkedin,
     faLinkedinIn,
     faTwitter,
-    faPaperPlane,
+		faPaperPlane,
+		faAngular
   ];
 
   constructor(library: FaIconLibrary) {
