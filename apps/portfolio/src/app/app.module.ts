@@ -70,14 +70,17 @@ import {
   FontAwesomeModule,
 } from '@fortawesome/angular-fontawesome';
 import {
-	faGithub,
-	faLinkedin, faLinkedinIn, faTwitter,
+  faGithub,
+  faLinkedin,
+  faLinkedinIn,
+  faTwitter,
 } from '@fortawesome/free-brands-svg-icons';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { ReactiveFormsModule } from '@angular/forms';
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
 const CdkModules = [
   LayoutModule,
@@ -160,7 +163,13 @@ const MaterialModule = [
   bootstrap: [AppComponent],
 })
 export class AppModule {
-  fontAwesomeIcons = [faGithub, faLinkedin, faLinkedinIn, faTwitter];
+  fontAwesomeIcons = [
+    faGithub,
+    faLinkedin,
+    faLinkedinIn,
+    faTwitter,
+    faPaperPlane,
+  ];
 
   constructor(library: FaIconLibrary) {
     library.addIcons(...this.fontAwesomeIcons);

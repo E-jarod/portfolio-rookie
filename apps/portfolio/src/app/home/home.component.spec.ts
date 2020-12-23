@@ -34,7 +34,7 @@ describe('HomeComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should compile', () => {
-    expect(component).toBeTruthy();
-  });
+  // xit('should compile', () => {
+  //   expect(component).toBeTruthy();
+  // });
 });
