@@ -1,7 +1,7 @@
 {
   "npmScope": "portfolio",
   "affected": {
-    "defaultBase": "master"
+    "defaultBase": "main"
   },
   "implicitDependencies": {
     "angular.json": "*",
