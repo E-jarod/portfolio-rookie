@@ -73,6 +73,11 @@ import {
 	faGithub,
 	faLinkedin, faLinkedinIn, faTwitter,
 } from '@fortawesome/free-brands-svg-icons';
+import { ContactFormComponent } from './contact-form/contact-form.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatRadioModule } from '@angular/material/radio';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const CdkModules = [
   LayoutModule,
@@ -135,6 +140,7 @@ const MaterialModule = [
     CoursesComponent,
     SkillsComponent,
     ErrorComponent,
+    ContactFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -143,6 +149,12 @@ const MaterialModule = [
     ...CdkModules,
     ...MaterialModule,
     FontAwesomeModule,
+    MatInputModule,
+    MatButtonModule,
+    MatSelectModule,
+    MatRadioModule,
+    MatCardModule,
+    ReactiveFormsModule,
   ],
   providers: [MatIconRegistry],
   bootstrap: [AppComponent],
