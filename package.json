@@ -46,7 +46,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@ngneat/tailwind": "^1.1.0",
     "@nrwl/angular": "10.4.4",
-    "rxjs": "~6.5.5",
+    "rxjs": "~6.6.3",
     "tslib": "^2.0.0",
     "zone.js": "^0.10.2"
   },
