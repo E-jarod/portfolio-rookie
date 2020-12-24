@@ -7001,10 +7001,10 @@ jest-pnp-resolver@^1.2.2:
   resolved "https://registry.yarnpkg.com/jest-pnp-resolver/-/jest-pnp-resolver-1.2.2.tgz#b704ac0ae028a89108a4d040b3f919dfddc8e33c"
   integrity sha512-olV41bKSMm8BdnuMsewT4jqlZ8+3TCARAXjZGT9jcoSnrfUnRCqnMoF9XEeoWjbzObpqF9dRhHQj0Xb9QdF6/w==
 
-jest-preset-angular@8.3.1:
-  version "8.3.1"
-  resolved "https://registry.yarnpkg.com/jest-preset-angular/-/jest-preset-angular-8.3.1.tgz#b8e4867639982a0989f4ef5ef0bad1c084070ef4"
-  integrity sha512-WhQm+0tXzikkvIF35XErV87DqYbieZI0R0MIGgn7VE/DDhdbXFDmYQxFZ7w4qcA0cGLLvSMTBbIsUtHeE/rFxQ==
+jest-preset-angular@8.3.2:
+  version "8.3.2"
+  resolved "https://registry.yarnpkg.com/jest-preset-angular/-/jest-preset-angular-8.3.2.tgz#170e0a4635dcd4b2ad02a1a805268b15da5b5543"
+  integrity sha512-mdETK9E5tkCJPnPzB7NLXDB7CULbUEwcrA7eKU7WdR0u7ZIJqP0pvQxK5Cc70KBsOEaiwJK6LSGJm7aeqjSYYA==
   dependencies:
     pretty-format "26.x"
     ts-jest "26.x"
@@ -11895,10 +11895,8 @@ watchpack@^1.7.4:
   resolved "https://registry.yarnpkg.com/watchpack/-/watchpack-1.7.5.tgz#1267e6c55e0b9b5be44c2023aed5437a2c26c453"
   integrity sha512-9P3MWk6SrKjHsGkLT2KHXdQ/9SNkyoJbabxnKOoJepsvJjJG8uYTR3yTPxPQvNDI3w4Nz1xnE0TLHK4RIVe/MQ==
   dependencies:
-    chokidar "^3.4.1"
     graceful-fs "^4.1.2"
     neo-async "^2.5.0"
-    watchpack-chokidar2 "^2.0.1"
   optionalDependencies:
     chokidar "^3.4.1"
     watchpack-chokidar2 "^2.0.1"
