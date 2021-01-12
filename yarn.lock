@@ -385,10 +385,10 @@
   dependencies:
     tslib "^2.0.0"
 
-"@angular/language-service@^11.0.2":
-  version "11.0.2"
-  resolved "https://registry.yarnpkg.com/@angular/language-service/-/language-service-11.0.2.tgz#b9a97a9bdd3d10ac2335eb94bacf8ab5514aeeb5"
-  integrity sha512-Cfam/NEP8hKkcqBVGlkBVuPkojZukmVOxdtsFIkIjJW/mywad2lIfjHR/0rZ43jD1bPb7s+tyYcJBgNg42p2ng==
+"@angular/language-service@^11.0.8":
+  version "11.0.8"
+  resolved "https://registry.yarnpkg.com/@angular/language-service/-/language-service-11.0.8.tgz#2354589115c7f851c016c7d3a68952f37040b80c"
+  integrity sha512-5iKvCzb0YWCrEvCUCGsmwQxfUQjnAOdeaNHieLmfkpAutojtIrK59rNmyQqA2RBpo2OZMANz0/aOde1N2rHI0w==
 
 "@angular/material@^11.0.0":
   version "11.0.0"
@@ -11895,10 +11895,8 @@ watchpack@^1.7.4:
   resolved "https://registry.yarnpkg.com/watchpack/-/watchpack-1.7.5.tgz#1267e6c55e0b9b5be44c2023aed5437a2c26c453"
   integrity sha512-9P3MWk6SrKjHsGkLT2KHXdQ/9SNkyoJbabxnKOoJepsvJjJG8uYTR3yTPxPQvNDI3w4Nz1xnE0TLHK4RIVe/MQ==
   dependencies:
-    chokidar "^3.4.1"
     graceful-fs "^4.1.2"
     neo-async "^2.5.0"
-    watchpack-chokidar2 "^2.0.1"
   optionalDependencies:
     chokidar "^3.4.1"
     watchpack-chokidar2 "^2.0.1"
