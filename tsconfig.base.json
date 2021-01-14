@@ -18,9 +18,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
-  },
-  "angularCompilerOptions": {
+    "paths": {},
+		"incremental": true
+	},
+	"angularCompilerOptions": {
     "strictInjectionParameters": true,
     "strictTemplates": true
   },

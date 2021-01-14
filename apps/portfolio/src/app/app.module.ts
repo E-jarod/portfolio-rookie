@@ -3,15 +3,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 // CDK modules
-import { LayoutModule } from '@angular/cdk/layout';
-import { A11yModule } from '@angular/cdk/a11y';
-import { ClipboardModule } from '@angular/cdk/clipboard';
-import { DragDropModule } from '@angular/cdk/drag-drop';
-import { PortalModule } from '@angular/cdk/portal';
-import { ScrollingModule } from '@angular/cdk/scrolling';
+// import { LayoutModule } from '@angular/cdk/layout';
+// import { A11yModule } from '@angular/cdk/a11y';
+// import { ClipboardModule } from '@angular/cdk/clipboard';
+// import { DragDropModule } from '@angular/cdk/drag-drop';
+// import { PortalModule } from '@angular/cdk/portal';
+// import { ScrollingModule } from '@angular/cdk/scrolling';
 import { CdkStepperModule } from '@angular/cdk/stepper';
-import { CdkTableModule } from '@angular/cdk/table';
-import { CdkTreeModule } from '@angular/cdk/tree';
+// import { CdkTableModule } from '@angular/cdk/table';
+// import { CdkTreeModule } from '@angular/cdk/tree';
 
 // Material modules
 // import { MatAutocompleteModule } from '@angular/material/autocomplete';
@@ -23,7 +23,7 @@ import { MatCardModule } from '@angular/material/card';
 // import { MatCheckboxModule } from '@angular/material/checkbox';
 // import { MatChipsModule } from '@angular/material/chips';
 import {
-  MatNativeDateModule,
+  // MatNativeDateModule,
   MatRippleModule,
 } from '@angular/material/core';
 // import { MatDatepickerModule } from '@angular/material/datepicker';
@@ -33,7 +33,6 @@ import {
 import { MatGridListModule } from '@angular/material/grid-list';
 import {
   MatIconModule,
-  MatIconRegistry,
 } from '@angular/material/icon';
 // import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
@@ -75,24 +74,25 @@ import {
   faLinkedin,
   faLinkedinIn,
   faTwitter,
+	IconDefinition,
 } from '@fortawesome/free-brands-svg-icons';
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { MatInputModule } from '@angular/material/input';
-import { MatSelectModule } from '@angular/material/select';
-import { MatRadioModule } from '@angular/material/radio';
+// import { MatSelectModule } from '@angular/material/select';
+// import { MatRadioModule } from '@angular/material/radio';
 import { ReactiveFormsModule } from '@angular/forms';
-import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
 const CdkModules = [
-  LayoutModule,
-  A11yModule,
-  ClipboardModule,
-  DragDropModule,
-  PortalModule,
-  ScrollingModule,
+  // LayoutModule,
+  // A11yModule,
+  // ClipboardModule,
+  // DragDropModule,
+  // PortalModule,
+  // ScrollingModule,
   CdkStepperModule,
-  CdkTableModule,
-  CdkTreeModule,
+  // CdkTableModule,
+  // CdkTreeModule,
 ];
 
 const MaterialModule = [
@@ -155,11 +155,11 @@ const MaterialModule = [
     ...CdkModules,
     ...MaterialModule,
   ],
-  providers: [MatIconRegistry],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {
-  fontAwesomeIcons = [
+  fontAwesomeIcons: IconDefinition[] = [
     faGithub,
     faLinkedin,
     faLinkedinIn,
