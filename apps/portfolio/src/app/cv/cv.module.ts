@@ -17,6 +17,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { CvRoutingModule } from '../cv-routing.module';
+import { CvSectionComponent } from './cv-section/cv-section.component';
 
 const CdkModules = [
   // LayoutModule,
@@ -68,6 +69,6 @@ const MaterialModule = [
 
 @NgModule({
   imports: [CommonModule, ...CdkModules, ...MaterialModule, CvRoutingModule],
-  declarations: [CvComponent],
+  declarations: [CvComponent, CvSectionComponent],
 })
 export class CvModule {}
