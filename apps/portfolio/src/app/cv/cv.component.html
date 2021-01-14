@@ -13,100 +13,144 @@
     rowspan="2"
   >
     <!-- 2480x3508 -->
-		<mat-card id="cv" class="flex flex-col justify-start w-full h-full">
-			<mat-card-header class="py-3 bg-blue-50 rounded-xl">
-				<div class="flex flex-start">
-					<div
-						class="flex-shrink-0 w-20 h-20 mr-3 bg-right bg-cover rounded-xl pp"
-						[style.backgroundImage]="'url(\'assets/meBeach_sm.jpg\')'"
-					></div>
-					<div>
-						<mat-card-title-group>
-							<mat-card-title class="text-2xl font-bold oswald"
-							>E-jarod
-							</mat-card-title>
-							<mat-card-subtitle class="text-2xl oswald">
-								Développeur
-								<b class="text-red-500">Angular</b> &
-								<b class="text-blue-500">Flutter</b>
-							</mat-card-subtitle>
-							<mat-card-subtitle class="oswald"
-							>19 ans | 03/02/2001
-							</mat-card-subtitle>
-						</mat-card-title-group>
-					</div>
-				</div>
-			</mat-card-header>
-			<mat-card-content
-				class="flex flex-row justify-between xl:items-center xl:flex-row xl:mt-8 px-0"
-			>
-				<!-- Experiences -->
-				<div>
-					<h3 class="mat-h3 oswald text-2xl">Expériences</h3>
-				</div>
-				<!-- Studies -->
-				<div>
-					<h3 class="mat-h3 oswald text-2xl">Formations</h3>
-				</div>
-				<!-- Targets -->
-				<div>
-					<h3 class="mat-h3 oswald text-2xl">Objectifs</h3>
-				</div>
-				<!-- Skills -->
-				<div
-					class="flex flex-col justify-start flex-grow rounded-lg oswald m-0 p-0"
-				>
-					<h3 class="mat-h3 oswald text-2xl">Compétences</h3>
-					<mat-list
-						class="flex-grow max-w-2xl p-3 rounded-xl bg-red-50 xl:ml-8"
-					>
-						<mat-list-item>
-							<div class="flex items-center justify-center w-full">
-								<p class="m-0 text-lg w-60 oswald">Angular</p>
-								<mat-progress-bar
-									[color]="'warn'"
-									[mode]="'buffer'"
-									[value]="50"
-									[bufferValue]="90"
-								>
-								</mat-progress-bar>
-							</div>
-						</mat-list-item>
-						<mat-list-item>
-							<div class="flex items-center justify-center w-full">
-								<p class="m-0 text-lg w-60 oswald">Flutter</p>
-								<mat-progress-bar
-									[color]="'primary'"
-									[mode]="'buffer'"
-									[value]="20"
-									[bufferValue]="80"
-								>
-								</mat-progress-bar>
-							</div>
-						</mat-list-item>
-					</mat-list>
-				</div>
-				<!-- Languages -->
-				<div>
-					<h3 class="mat-h3">Langues</h3>
-				</div>
-				<!-- Interests -->
-				<div class="flex-col">
-					<h3 class="mat-h3">Centres d'intérêts</h3>
-					<hr class="mb-3 border-b-8 w-4/5 border-red-600" />
-					<!-- <div class="b-div mx-auto mb-5"></div> -->
-					<div class="col-12">
-						<p>
-							Développement | Sciences & Mathématiques | Sports
-							(Basketball) | Cuisine Indienne | Veille Technologique
-						</p>
-					</div>
-				</div>
-				<!-- Icons -->
-				<div>Social icons</div>
-			</mat-card-content>
-		</mat-card>
+    <mat-card
+      id="cv"
+      class="flex flex-col justify-start w-full h-full"
+    >
+      <mat-card-header class="py-3 bg-blue-50 rounded-xl">
+        <div class="flex flex-start">
+          <div
+            class="flex-shrink-0 w-20 h-20 mr-3 bg-right bg-cover rounded-xl pp"
+            [style.backgroundImage]="'url(\'assets/meBeach_sm.jpg\')'"
+          ></div>
+          <div>
+            <mat-card-title-group>
+              <mat-card-title class="text-2xl font-bold oswald"
+                >E-jarod
+              </mat-card-title>
+              <mat-card-subtitle class="text-2xl oswald">
+                Développeur
+                <b class="text-red-500">Angular</b> &
+                <b class="text-blue-500">Flutter</b>
+              </mat-card-subtitle>
+              <mat-card-subtitle class="oswald"
+                >19 ans | 03/02/2001
+              </mat-card-subtitle>
+            </mat-card-title-group>
+          </div>
+        </div>
+      </mat-card-header>
+      <mat-card-content
+        class="flex flex-row justify-between xl:items-center xl:flex-row xl:mt-8 px-0"
+      >
+        <div class="flex-col col-span-1">
+          <!-- Targets -->
+          <portfolio-cv-section [title]="'Objectifs'">
+          </portfolio-cv-section>
+          <!-- Skills -->
+          <portfolio-cv-section [title]="'Compétences'">
+            <div
+              class="flex flex-col justify-start flex-grow rounded-lg oswald m-0 p-0"
+            >
+              <mat-list
+                class="flex-grow max-w-2xl p-3 rounded-xl bg-red-50 xl:ml-8"
+              >
+                <mat-list-item>
+                  <div
+                    class="flex items-center justify-center w-full"
+                  >
+                    <p class="m-0 text-lg w-60 oswald">Angular</p>
+                    <mat-progress-bar
+                      [color]="'warn'"
+                      [mode]="'buffer'"
+                      [value]="50"
+                      [bufferValue]="90"
+                    >
+                    </mat-progress-bar>
+                  </div>
+                </mat-list-item>
+                <mat-list-item>
+                  <div
+                    class="flex items-center justify-center w-full"
+                  >
+                    <p class="m-0 text-lg w-60 oswald">Flutter</p>
+                    <mat-progress-bar
+                      [color]="'primary'"
+                      [mode]="'buffer'"
+                      [value]="20"
+                      [bufferValue]="80"
+                    >
+                    </mat-progress-bar>
+                  </div>
+                </mat-list-item>
+              </mat-list>
+            </div>
+          </portfolio-cv-section>
+          <!-- Languages -->
+          <portfolio-cv-section [title]="'Langues'">
+          </portfolio-cv-section>
+        </div>
+        <div class="col-span-2 flex-col">
+          <!-- Experiences -->
+          <portfolio-cv-section [title]="'Expériences'">
+            <h5 class="mat-h5 oswald text-center">
+              <b>
+                2019 - 2021 | PASS Technologie, Paris | Développeur
+                Angular <em>(Alternance)</em>
+              </b>
+            </h5>
+            <!-- <p class="mb-1">Développement Front avec Angular :</p> -->
+            <ul>
+              <li>
+                Application desktop en Electron permettant une conception guidée de cloisons vitrées via une interface
+                en Angular
+              </li>
+              <li>Refonte du site web de Correlyce en Angular</li>
+            </ul>
+
+            <h5 class="mat-h5 oswald text-center">
+              <b
+                >2019 | Lycée Jean Rostand, Villepinte | Projet de SI
+                (T<sup>le</sup>S SI)</b
+              >
+            </h5>
+            <!-- <p>2 Projets scolaires :</p> -->
+            <ul>
+              <li>
+                Projet informatique : programmer en python un robot
+                LEGO EV3 en binôme
+              </li>
+              <li>
+                Projet multiphysique : étudier le comportement
+                électrique et mécanique d'un skate électrique
+              </li>
+            </ul>
+          </portfolio-cv-section>
+          <!-- Studies -->
+          <portfolio-cv-section [title]="'Formations'">
+          </portfolio-cv-section>
+          <!-- Interests -->
+          <portfolio-cv-section [title]="'Centres d\'intérêts'">
+            <p>
+              Développement | Sciences & Mathématiques | Sports
+              (Basketball) | Cuisine Indienne | Veille Technologique
+            </p>
+          </portfolio-cv-section>
+        </div>
+      </mat-card-content>
+      <mat-card-footer>
+        <!-- Icons -->
+        <div>Social icons</div>
+      </mat-card-footer>
+    </mat-card>
   </mat-grid-tile>
 </mat-grid-list>
 
-<button mat-raised-button color="warn" role="button" (click)="print()">Open PDF</button>
+<button
+  mat-raised-button
+  color="warn"
+  role="button"
+  (click)="print()"
+>
+  Open PDF
+</button>
