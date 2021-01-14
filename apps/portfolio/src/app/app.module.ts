@@ -31,9 +31,7 @@ import {
 // import { MatDividerModule } from '@angular/material/divider';
 // import { MatExpansionModule } from '@angular/material/expansion';
 import { MatGridListModule } from '@angular/material/grid-list';
-import {
-  MatIconModule,
-} from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
 // import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
@@ -58,7 +56,6 @@ import { AppComponent } from './app.component';
 import { RootNavigationComponent } from './root-navigation/root-navigation.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
-import { CvComponent } from './cv/cv.component';
 import { TechWatchComponent } from './tech-watch/tech-watch.component';
 import { ContactComponent } from './contact/contact.component';
 import { CoursesComponent } from './courses/courses.component';
@@ -69,12 +66,12 @@ import {
   FontAwesomeModule,
 } from '@fortawesome/angular-fontawesome';
 import {
-	faAngular,
+  faAngular,
   faGithub,
   faLinkedin,
   faLinkedinIn,
   faTwitter,
-	IconDefinition,
+  IconDefinition,
 } from '@fortawesome/free-brands-svg-icons';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import { ContactFormComponent } from './contact-form/contact-form.component';
@@ -82,6 +79,7 @@ import { MatInputModule } from '@angular/material/input';
 // import { MatSelectModule } from '@angular/material/select';
 // import { MatRadioModule } from '@angular/material/radio';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CvModule } from './cv/cv.module';
 
 const CdkModules = [
   // LayoutModule,
@@ -138,7 +136,6 @@ const MaterialModule = [
     AppComponent,
     RootNavigationComponent,
     HomeComponent,
-    CvComponent,
     TechWatchComponent,
     ContactComponent,
     CoursesComponent,
@@ -152,6 +149,7 @@ const MaterialModule = [
     AppRoutingModule,
     FontAwesomeModule,
     ReactiveFormsModule,
+    CvModule,
     ...CdkModules,
     ...MaterialModule,
   ],
@@ -164,8 +162,8 @@ export class AppModule {
     faLinkedin,
     faLinkedinIn,
     faTwitter,
-		faPaperPlane,
-		faAngular
+    faPaperPlane,
+    faAngular,
   ];
 
   constructor(library: FaIconLibrary) {
