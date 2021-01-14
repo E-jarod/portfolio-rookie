@@ -21,7 +21,7 @@ const routes: Routes = [
 	},
 	{
 		path: 'cv',
-		component: CvComponent
+		loadChildren: () => import('./cv/cv.module').then(m => m.CvModule)
 	},
 	{
 		path: 'skills',

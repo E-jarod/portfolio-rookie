@@ -16,6 +16,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { CvRoutingModule } from '../cv-routing.module';
 
 const CdkModules = [
   // LayoutModule,
@@ -66,7 +67,7 @@ const MaterialModule = [
 ];
 
 @NgModule({
-  imports: [CommonModule, ...CdkModules, ...MaterialModule],
+  imports: [CommonModule, ...CdkModules, ...MaterialModule, CvRoutingModule],
   declarations: [CvComponent],
 })
 export class CvModule {}

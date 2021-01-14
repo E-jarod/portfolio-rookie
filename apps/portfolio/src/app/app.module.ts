@@ -146,12 +146,11 @@ const MaterialModule = [
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule,
     FontAwesomeModule,
     ReactiveFormsModule,
-    CvModule,
     ...CdkModules,
     ...MaterialModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
