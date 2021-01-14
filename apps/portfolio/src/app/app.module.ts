@@ -1,6 +1,7 @@
+import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgModule } from '@angular/core';
 
 // CDK modules
 // import { LayoutModule } from '@angular/cdk/layout';
@@ -51,16 +52,9 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { MatToolbarModule } from '@angular/material/toolbar';
 // import { MatTooltipModule } from '@angular/material/tooltip';
 // import { MatTreeModule } from '@angular/material/tree';
+import { MatInputModule } from '@angular/material/input';
 
-import { AppComponent } from './app.component';
-import { RootNavigationComponent } from './root-navigation/root-navigation.component';
-import { AppRoutingModule } from './app-routing.module';
-import { HomeComponent } from './home/home.component';
-import { TechWatchComponent } from './tech-watch/tech-watch.component';
-import { ContactComponent } from './contact/contact.component';
-import { CoursesComponent } from './courses/courses.component';
-import { SkillsComponent } from './skills/skills.component';
-import { ErrorComponent } from './error/error.component';
+// Fontawesome
 import {
   FaIconLibrary,
   FontAwesomeModule,
@@ -74,12 +68,17 @@ import {
   IconDefinition,
 } from '@fortawesome/free-brands-svg-icons';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { RootNavigationComponent } from './root-navigation/root-navigation.component';
+import { HomeComponent } from './home/home.component';
+import { TechWatchComponent } from './tech-watch/tech-watch.component';
+import { ContactComponent } from './contact/contact.component';
+import { CoursesComponent } from './courses/courses.component';
+import { SkillsComponent } from './skills/skills.component';
+import { ErrorComponent } from './error/error.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
-import { MatInputModule } from '@angular/material/input';
-// import { MatSelectModule } from '@angular/material/select';
-// import { MatRadioModule } from '@angular/material/radio';
-import { ReactiveFormsModule } from '@angular/forms';
-import { CvModule } from './cv/cv.module';
 
 const CdkModules = [
   // LayoutModule,

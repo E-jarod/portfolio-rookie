@@ -10,7 +10,7 @@
   <mat-grid-tile
     class="border-red-500 shadow-2xl center"
     colspan="1"
-    rowspan="2"
+    rowspan="4"
   >
     <!-- 2480x3508 -->
     <mat-card
@@ -102,8 +102,9 @@
             <!-- <p class="mb-1">Développement Front avec Angular :</p> -->
             <ul>
               <li>
-                Application desktop en Electron permettant une conception guidée de cloisons vitrées via une interface
-                en Angular
+                Application desktop en Electron permettant une
+                conception guidée de cloisons vitrées via une
+                interface en Angular.
               </li>
               <li>Refonte du site web de Correlyce en Angular</li>
             </ul>
@@ -138,10 +139,46 @@
           </portfolio-cv-section>
         </div>
       </mat-card-content>
-      <mat-card-footer>
-        <!-- Icons -->
-        <div>Social icons</div>
-      </mat-card-footer>
+      <mat-card-actions>
+        <div>
+          <a
+            mat-icon-button
+            class="mr-px md:mr-4"
+            href="https://github.com/E-jarod"
+            target="_blank"
+            rel="noopener noreferer"
+          >
+            <fa-icon
+              class="sm:text-3xl"
+              [icon]="['fab', 'github']"
+            ></fa-icon>
+          </a>
+          <a
+            mat-icon-button
+            class="mr-px md:mr-4"
+            href="https://www.linkedin.com/in/e-jarod/"
+            target="_blank"
+            rel="noopener noreferer"
+          >
+            <fa-icon
+              class="sm:text-3xl"
+              [icon]="['fab', 'linkedin']"
+            ></fa-icon>
+          </a>
+          <a
+            mat-icon-button
+            class="mr-px md:mr-4"
+            href="https://twitter.com/E_jarod7"
+            target="_blank"
+            rel="noopener noreferer"
+          >
+            <fa-icon
+              class="sm:text-3xl"
+              [icon]="['fab', 'twitter']"
+            ></fa-icon>
+          </a>
+        </div>
+      </mat-card-actions>
     </mat-card>
   </mat-grid-tile>
 </mat-grid-list>

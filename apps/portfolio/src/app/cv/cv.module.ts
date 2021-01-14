@@ -17,55 +17,39 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { CvRoutingModule } from '../cv-routing.module';
+// Fontawesome
+import {
+  FaIconLibrary,
+  FontAwesomeModule,
+} from '@fortawesome/angular-fontawesome';
+import {
+  faAngular,
+  faGithub,
+  faLinkedin,
+  faLinkedinIn,
+  faTwitter,
+  IconDefinition,
+} from '@fortawesome/free-brands-svg-icons';
 // Components
 import { CvSectionComponent } from './cv-section/cv-section.component';
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import { SkillBarComponent } from '@portfolio/ui';
 
-const CdkModules = [
-  // LayoutModule,
-  // A11yModule,
-  // ClipboardModule,
-  // DragDropModule,
-  // PortalModule,
-  // ScrollingModule,
-  CdkStepperModule,
-];
+const CdkModules = [CdkStepperModule];
 
 const MaterialModule = [
-  // MatAutocompleteModule,
-  // MatBadgeModule,
-  // MatBottomSheetModule,
   MatButtonModule,
-  // MatButtonToggleModule,
   MatCardModule,
-  // MatCheckboxModule,
-  // MatChipsModule,
-  // MatNativeDateModule,
   MatRippleModule,
-  // MatDatepickerModule,
-  // MatDialogModule,
-  // MatDividerModule,
-  // MatExpansionModule,
   MatGridListModule,
   MatIconModule,
   MatInputModule,
   MatListModule,
   MatMenuModule,
-  // MatPaginatorModule,
   MatProgressBarModule,
-  // MatProgressSpinnerModule,
-  // MatRadioModule,
-  // MatSelectModule,
   MatSidenavModule,
-  // MatSlideToggleModule,
-  // MatSliderModule,
-  // MatSnackBarModule,
-  // MatSortModule,
   MatStepperModule,
-  // MatTableModule,
-  // MatTabsModule,
   MatToolbarModule,
-  // MatTooltipModule,
-  // MatTreeModule,
 ];
 
 @NgModule({
@@ -74,7 +58,21 @@ const MaterialModule = [
     ...CdkModules,
     ...MaterialModule,
     CvRoutingModule,
+    FontAwesomeModule,
   ],
-  declarations: [CvComponent, CvSectionComponent],
+  declarations: [CvComponent, CvSectionComponent, SkillBarComponent],
 })
-export class CvModule {}
+export class CvModule {
+  fontAwesomeIcons: IconDefinition[] = [
+    faGithub,
+    faLinkedin,
+    faLinkedinIn,
+    faTwitter,
+    faPaperPlane,
+    faAngular,
+  ];
+
+  constructor(library: FaIconLibrary) {
+    library.addIcons(...this.fontAwesomeIcons);
+  }
+}
