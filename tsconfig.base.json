@@ -18,7 +18,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@portfolio/ui": ["libs/ui/src/index.ts"],
+      "@portfolio/shared": ["libs/shared/src/index.ts"]
+    },
+    "incremental": true
   },
   "angularCompilerOptions": {
     "strictInjectionParameters": true,
