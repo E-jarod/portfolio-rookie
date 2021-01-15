@@ -6,225 +6,190 @@
 
 <h1 class="mat-h1">CV</h1>
 
-<div id="CV-wrapper" class="container m-3 mx-auto shadow">
-  <div id="CV">
-    <header class="mx-auto mb-3 row">
-      <div id="img" class="w-25">
-        <!-- <img class="border border-dark" src="../../../assets/img/Jarod CV img.PNG" alt="Jarod" /> -->
-        <img src="assets/img/Jarod CV img.PNG" alt="Jarod" />
-      </div>
-      <div id="img-des" class="p-2 pr-5 w-75">
-        <h3 class="title">EJILANE Jarod</h3>
-        <h5 class="subtitle">19 ans | 03/02/2001</h5>
-        <div class="mx-auto border rounded border-light">
-          <h3>Développeur junior | Alternance 3j / 2j</h3>
-        </div>
-      </div>
-    </header>
-
-    <div class="p-1 mx-auto row">
-      <div id="skills" class="col-md-5 col-sm-12">
-        <h2 class="mx-auto cv-section-title">Compétences</h2>
-        <hr class="mb-3 red-div" />
-
-        <!-- <div *ngFor="let bar of bars">
-            <div class="progress">
-              <div class="progress-bar skill-label"><span class="text text-light">{{bar.label}}</span></div>
-              <div class="progress-bar" role="progressbar" [ngStyle]="{'width.%': bar.value, 'background': background}" [attr.aria-valuenow]="bar.value" aria-valuemin="0" aria-valuemax="100">{{bar.value}}%</div>
-            </div>
-          </div> -->
-
-        <!-- <div class="mx-auto" *ngFor="let bar of bars">
-          <div class="bar-custom">
-            <div class="skill-label">
-              <span class="label">{{ bar.label }}</span>
-            </div>
-            <div class="progress">
-              <div
-                class="progress-bar"
-                role="progressbar"
-                [ngStyle]="{
-                  'width.%': bar.value,
-                  background: background
-                }"
-                [attr.aria-valuenow]="bar.value"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              >
-                {{ bar.value }}%
-              </div>
-            </div>
+<mat-grid-list cols="1" rowHeight="300px">
+  <mat-grid-tile
+    class="border-red-500 shadow-2xl center"
+    colspan="1"
+    rowspan="4"
+  >
+    <!-- 2480x3508 -->
+    <mat-card
+      id="cv"
+      class="flex flex-col justify-start w-full h-full"
+    >
+      <mat-card-header class="py-3 bg-blue-50 rounded-xl">
+        <div class="flex flex-start">
+          <div
+            class="flex-shrink-0 w-20 h-20 mr-3 bg-right bg-cover rounded-xl pp"
+            [style.backgroundImage]="'url(\'assets/meBeach_sm.jpg\')'"
+          ></div>
+          <div>
+            <mat-card-title-group>
+              <mat-card-title class="text-2xl font-bold oswald"
+                >E-jarod
+              </mat-card-title>
+              <mat-card-subtitle class="text-2xl oswald">
+                Développeur
+                <b class="text-red-500">Angular</b> &
+                <b class="text-blue-500">Flutter</b>
+              </mat-card-subtitle>
+              <mat-card-subtitle class="oswald"
+                >19 ans | 03/02/2001
+              </mat-card-subtitle>
+            </mat-card-title-group>
           </div>
-        </div> -->
-
-        <!-- <div class="clearfix skillbar progress" data-percent="70%">
-            <div class="skillbar-title" style="background: #fc3c21;">
-              <span>C</span>
-            </div>
-            <div class="skillbar-bar progress-bar" style="background: #f54321;"></div>
-            <div class="skill-bar-percent">70%</div>
-          </div> -->
-        <!-- End Skill Bar -->
-      </div>
-
-      <div class="col-md-7 col-sm-12">
-        <h2 class="cv-section-title">Expériences</h2>
-        <hr class="mb-3 red-div" />
-
-        <div class="col-12">
-          <h6>
-            <strong
-              >2019 - 2021 | PASS Technologie, Paris | Développeur
-              Junior <em>(Alternance)</em></strong
-            >
-          </h6>
-          <!-- <p class="mb-1">Développement Front avec Angular :</p> -->
-          <ul>
-            <li>
-              Application de conception guidée de cloisons vitrées en
-              Angular (Renderer Electron)
-            </li>
-            <li>Refonte du site web de Correlyce en Angular</li>
-          </ul>
-
-          <h6>
-            <strong
-              >2019 | Lycée Jean Rostand, Villepinte | Projet de SI
-              (T<sup>le</sup>S SI)</strong
-            >
-          </h6>
-          <!-- <p>2 Projets scolaires :</p> -->
-          <ul>
-            <li>
-              Projet informatique : programmer en python un robot LEGO
-              EV3 en binôme
-            </li>
-            <li>
-              Projet multiphysique : étudier le comportement
-              électrique et mécanique d'un skate électrique
-            </li>
-          </ul>
         </div>
-      </div>
-    </div>
-
-    <div class="p-1 mx-auto row">
-      <div class="col-md-5 col-sm-12">
-        <h2 class="cv-section-title">Objectifs</h2>
-        <hr class="mb-3 red-div" />
-
-        <p>
-          ► <strong>Comprendre</strong> les exigences du marché
-          professionnel et informatique<br />
-        </p>
-        <p>
-          ► Obtenir un <strong>niveau Bac +5</strong>, en gagnant de
-          l’expérience professionnelle<br />
-        </p>
-        <p>► Devenir un <strong>expert en informatique</strong></p>
-      </div>
-
-      <div class="col-md-7 col-sm-12">
-        <h2 class="cv-section-title">Formations</h2>
-        <hr class="mb-3 red-div" />
-
-        <div class="col-12">
-          <h6><strong>2019 - 2021 | CFA INSTA, Paris 2e</strong></h6>
-          <p>
-            <strong>BTS SIO</strong
-            ><em> - Services Informatiques aux Organisations</em> |
-            option <strong>SLAM</strong> |
-            <em><strong>(Diplôme en cours)</strong></em>
-          </p>
-          <h6>
-            <strong
-              >2018 - 2019 | Lycée Jean Rostand, Villepinte</strong
-            >
-          </h6>
-          <p>
-            <strong>Bac S</strong> | option <strong>SI</strong>
-            <em> - Sciences de l'Igénieur</em><br />
-            | spécialité <strong>ISN</strong> | Mention :
-            <em><strong>Bien</strong></em>
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="p-1 mx-auto row">
-      <div id="langues" class="col-md-5 col-sm-12">
-        <h2 class="cv-section-title">Langues</h2>
-        <hr class="mb-3 red-div" />
-
-        <p class="pl-1 mx-auto mb-3 d-inline-block">
-          <strong>Anglais | Intermédiaire</strong><br />
-          <strong> Tamoul | Courant</strong>
-        </p>
-      </div>
-
-      <div id="ci" class="col-md-7 col-sm-12">
-        <h2 class="cv-section-title">Centres d'intérêts</h2>
-        <hr class="mb-3 red-div" />
-        <!-- <div class="mx-auto mb-5 b-div"></div> -->
-        <div class="col-12">
-          <p>
-            Développement | Sciences & Mathématiques | Sports
-            (Basketball) | Cuisine Indienne | Veille Technologique
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="p-0 m-0 mx-auto row">
-      <div
-        id="social"
-        class="p-0 m-0 col-12 d-flex justify-content-around align-items-start"
+      </mat-card-header>
+      <mat-card-content
+        class="flex flex-row justify-between xl:items-center xl:flex-row xl:mt-8 px-0"
       >
-        <div class="col-3 d-flex flex-column">
-          <button class="mx-auto mb-3 btn btn-icon">
-            <img src="../../../assets/img/call-24px.svg" alt="" />
-          </button>
-          <p class="mx-auto cv-contact">07 68 45 86 63</p>
+        <div class="flex-col col-span-1">
+          <!-- Targets -->
+          <portfolio-cv-section [title]="'Objectifs'">
+          </portfolio-cv-section>
+          <!-- Skills -->
+          <portfolio-cv-section [title]="'Compétences'">
+            <div
+              class="flex flex-col justify-start flex-grow rounded-lg oswald m-0 p-0"
+            >
+              <mat-list
+                class="flex-grow max-w-2xl p-3 rounded-xl bg-red-50 xl:ml-8"
+              >
+                <mat-list-item>
+                  <portfolio-skill-bar
+                    [skillName]="'Angular'"
+                    [color]="'warn'"
+                    [mode]="'buffer'"
+										[value]="50"
+                    [bufferValue]="90"
+                  ></portfolio-skill-bar>
+                </mat-list-item>
+                <mat-list-item>
+                  <portfolio-skill-bar
+                    [skillName]="'Flutter'"
+                    [color]="'primary'"
+                    [mode]="'buffer'"
+										[value]="20"
+                    [bufferValue]="80"
+                  ></portfolio-skill-bar>
+                  <!--									<div-->
+                  <!--                    class="flex items-center justify-center w-full"-->
+                  <!--                  >-->
+                  <!--                    <p class="m-0 text-lg w-60 oswald">Flutter</p>-->
+                  <!--                    <mat-progress-bar-->
+                  <!--                      [color]="'primary'"-->
+                  <!--                      [mode]="'buffer'"-->
+                  <!--                      [value]="20"-->
+                  <!--                      [bufferValue]="80"-->
+                  <!--                    >-->
+                  <!--                    </mat-progress-bar>-->
+                  <!--                  </div>-->
+                </mat-list-item>
+              </mat-list>
+            </div>
+          </portfolio-cv-section>
+          <!-- Languages -->
+          <portfolio-cv-section [title]="'Langues'">
+          </portfolio-cv-section>
         </div>
-        <div class="col-3 d-flex flex-column">
-          <button class="mx-auto mb-3 btn btn-icon">
-            <img src="../../../assets/img/email-24px.svg" alt="" />
-          </button>
-          <p class="mx-auto cv-contact">ejilane.jarod@gmail.com</p>
-        </div>
-        <div class="col-3 d-flex flex-column">
-          <button class="mx-auto mb-3 btn btn-icon">
-            <img src="../../../assets/img/home-24px.svg" alt="" />
-          </button>
-          <p class="mx-auto cv-contact">
-            11, avenue Jacques Duclos 93420 Villepinte
-          </p>
-        </div>
-        <div class="col-3 d-flex flex-column">
-          <button class="mx-auto mb-3 btn btn-icon">
-            <img src="../../../assets/img/linkedin.svg" alt="" />
-          </button>
-          <p class="mx-auto cv-contact">Jarod EJILANE</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+        <div class="col-span-2 flex-col">
+          <!-- Experiences -->
+          <portfolio-cv-section [title]="'Expériences'">
+            <h5 class="mat-h5 oswald text-center">
+              <b>
+                2019 - 2021 | PASS Technologie, Paris | Développeur
+                Angular <em>(Alternance)</em>
+              </b>
+            </h5>
+            <!-- <p class="mb-1">Développement Front avec Angular :</p> -->
+            <ul>
+              <li>
+                Application desktop en Electron permettant une
+                conception guidée de cloisons vitrées via une
+                interface en Angular.
+              </li>
+              <li>Refonte du site web de Correlyce en Angular</li>
+            </ul>
 
-<div class="w-100 d-flex">
-  <button
-    role="button"
-    class="mx-auto mb-2 w-25 text-light btn btn-primary"
-  >
-    Download PDF
-  </button>
-</div>
+            <h5 class="mat-h5 oswald text-center">
+              <b
+                >2019 | Lycée Jean Rostand, Villepinte | Projet de SI
+                (T<sup>le</sup>S SI)</b
+              >
+            </h5>
+            <!-- <p>2 Projets scolaires :</p> -->
+            <ul>
+              <li>
+                Projet informatique : programmer en python un robot
+                LEGO EV3 en binôme
+              </li>
+              <li>
+                Projet multiphysique : étudier le comportement
+                électrique et mécanique d'un skate électrique
+              </li>
+            </ul>
+          </portfolio-cv-section>
+          <!-- Studies -->
+          <portfolio-cv-section [title]="'Formations'">
+          </portfolio-cv-section>
+          <!-- Interests -->
+          <portfolio-cv-section [title]="'Centres d\'intérêts'">
+            <p>
+              Développement | Sciences & Mathématiques | Sports
+              (Basketball) | Cuisine Indienne | Veille Technologique
+            </p>
+          </portfolio-cv-section>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <div>
+          <a
+            mat-icon-button
+            class="mr-px md:mr-4"
+            href="https://github.com/E-jarod"
+            target="_blank"
+            rel="noopener noreferer"
+          >
+            <fa-icon
+              class="sm:text-3xl"
+              [icon]="['fab', 'github']"
+            ></fa-icon>
+          </a>
+          <a
+            mat-icon-button
+            class="mr-px md:mr-4"
+            href="https://www.linkedin.com/in/e-jarod/"
+            target="_blank"
+            rel="noopener noreferer"
+          >
+            <fa-icon
+              class="sm:text-3xl"
+              [icon]="['fab', 'linkedin']"
+            ></fa-icon>
+          </a>
+          <a
+            mat-icon-button
+            class="mr-px md:mr-4"
+            href="https://twitter.com/E_jarod7"
+            target="_blank"
+            rel="noopener noreferer"
+          >
+            <fa-icon
+              class="sm:text-3xl"
+              [icon]="['fab', 'twitter']"
+            ></fa-icon>
+          </a>
+        </div>
+      </mat-card-actions>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
 
-<div class="w-100 d-flex">
-  <button
-    role="button"
-    class="mx-auto mb-2 w-25 text-light btn btn-primary"
-  >
-    Open PDF
-  </button>
-</div>
+<button
+  mat-raised-button
+  color="warn"
+  role="button"
+  (click)="print()"
+>
+  Open PDF
+</button>

@@ -29,6 +29,12 @@
     "portfolio-e2e": {
       "tags": [],
       "implicitDependencies": ["portfolio"]
+    },
+    "ui": {
+      "tags": []
+    },
+    "shared": {
+      "tags": []
     }
   }
 }
