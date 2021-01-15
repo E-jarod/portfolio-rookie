@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -10,7 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { DragDropModule } from '@angular/cdk/drag-drop';
 // import { PortalModule } from '@angular/cdk/portal';
 // import { ScrollingModule } from '@angular/cdk/scrolling';
-import { CdkStepperModule } from '@angular/cdk/stepper';
+// import { CdkStepperModule } from '@angular/cdk/stepper';
 // import { CdkTableModule } from '@angular/cdk/table';
 // import { CdkTreeModule } from '@angular/cdk/tree';
 
@@ -60,20 +59,18 @@ import { AppRoutingModule } from './app-routing.module';
 // Components
 import { AppComponent } from './app.component';
 import { RootNavigationComponent } from './root-navigation/root-navigation.component';
-import { ContactComponent } from './contact/contact.component';
-import { ContactFormComponent } from './contact-form/contact-form.component';
 
-const CdkModules = [
-  // LayoutModule,
-  // A11yModule,
-  // ClipboardModule,
-  // DragDropModule,
-  // PortalModule,
-  // ScrollingModule,
-  CdkStepperModule,
-  // CdkTableModule,
-  // CdkTreeModule,
-];
+// const CdkModules = [
+//   // LayoutModule,
+//   // A11yModule,
+//   // ClipboardModule,
+//   // DragDropModule,
+//   // PortalModule,
+//   // ScrollingModule,
+//   CdkStepperModule,
+//   // CdkTableModule,
+//   // CdkTreeModule,
+// ];
 
 const MaterialModules = [
   // MatAutocompleteModule,
@@ -117,18 +114,11 @@ const MaterialModules = [
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    FontawesomeModule,
-    ReactiveFormsModule,
-    ...CdkModules,
     ...MaterialModules,
+    FontawesomeModule,
     AppRoutingModule,
   ],
-  declarations: [
-    AppComponent,
-    RootNavigationComponent,
-    ContactComponent,
-    ContactFormComponent,
-  ],
+  declarations: [AppComponent, RootNavigationComponent],
   providers: [],
   bootstrap: [AppComponent],
 })
