@@ -61,7 +61,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RootNavigationComponent } from './root-navigation/root-navigation.component';
 import { ContactComponent } from './contact/contact.component';
-import { ErrorComponent } from './error/error.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 
 const CdkModules = [
@@ -128,7 +127,6 @@ const MaterialModules = [
     AppComponent,
     RootNavigationComponent,
     ContactComponent,
-    ErrorComponent,
     ContactFormComponent,
   ],
   providers: [],

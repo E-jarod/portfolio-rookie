@@ -45,7 +45,8 @@ const routes: Routes = [
   },
   {
     path: '**',
-    component: ErrorComponent,
+    loadChildren: () =>
+      import('./error/error.module').then((m) => m.ErrorModule),
   },
 ];
 
