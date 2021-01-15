@@ -63,7 +63,6 @@ import { RootNavigationComponent } from './root-navigation/root-navigation.compo
 import { HomeComponent } from './home/home.component';
 import { TechWatchComponent } from './tech-watch/tech-watch.component';
 import { ContactComponent } from './contact/contact.component';
-import { CoursesComponent } from './courses/courses.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ErrorComponent } from './error/error.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
@@ -125,7 +124,6 @@ const MaterialModule = [
     HomeComponent,
     TechWatchComponent,
     ContactComponent,
-    CoursesComponent,
     SkillsComponent,
     ErrorComponent,
     ContactFormComponent,
