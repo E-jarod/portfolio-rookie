@@ -56,32 +56,34 @@
                 class="flex-grow max-w-2xl p-3 rounded-xl bg-red-50 xl:ml-8"
               >
                 <mat-list-item>
-                  <div
-                    class="flex items-center justify-center w-full"
-                  >
-                    <p class="m-0 text-lg w-60 oswald">Angular</p>
-                    <mat-progress-bar
-                      [color]="'warn'"
-                      [mode]="'buffer'"
-                      [value]="50"
-                      [bufferValue]="90"
-                    >
-                    </mat-progress-bar>
-                  </div>
+                  <portfolio-skill-bar
+                    [skillName]="'Angular'"
+                    [color]="'warn'"
+                    [mode]="'buffer'"
+										[value]="50"
+                    [bufferValue]="90"
+                  ></portfolio-skill-bar>
                 </mat-list-item>
                 <mat-list-item>
-                  <div
-                    class="flex items-center justify-center w-full"
-                  >
-                    <p class="m-0 text-lg w-60 oswald">Flutter</p>
-                    <mat-progress-bar
-                      [color]="'primary'"
-                      [mode]="'buffer'"
-                      [value]="20"
-                      [bufferValue]="80"
-                    >
-                    </mat-progress-bar>
-                  </div>
+                  <portfolio-skill-bar
+                    [skillName]="'Flutter'"
+                    [color]="'primary'"
+                    [mode]="'buffer'"
+										[value]="20"
+                    [bufferValue]="80"
+                  ></portfolio-skill-bar>
+                  <!--									<div-->
+                  <!--                    class="flex items-center justify-center w-full"-->
+                  <!--                  >-->
+                  <!--                    <p class="m-0 text-lg w-60 oswald">Flutter</p>-->
+                  <!--                    <mat-progress-bar-->
+                  <!--                      [color]="'primary'"-->
+                  <!--                      [mode]="'buffer'"-->
+                  <!--                      [value]="20"-->
+                  <!--                      [bufferValue]="80"-->
+                  <!--                    >-->
+                  <!--                    </mat-progress-bar>-->
+                  <!--                  </div>-->
                 </mat-list-item>
               </mat-list>
             </div>

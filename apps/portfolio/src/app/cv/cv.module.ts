@@ -16,24 +16,12 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { CvRoutingModule } from '../cv-routing.module';
-// Fontawesome
-import {
-  FaIconLibrary,
-  FontAwesomeModule,
-} from '@fortawesome/angular-fontawesome';
-import {
-  faAngular,
-  faGithub,
-  faLinkedin,
-  faLinkedinIn,
-  faTwitter,
-  IconDefinition,
-} from '@fortawesome/free-brands-svg-icons';
+
+import { CvRoutingModule } from './cv-routing.module';
+import { SkillBarModule } from '@portfolio/ui';
+import { FontawesomeModule } from '@portfolio/shared';
 // Components
 import { CvSectionComponent } from './cv-section/cv-section.component';
-import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
-import { SkillBarComponent } from '@portfolio/ui';
 
 const CdkModules = [CdkStepperModule];
 
@@ -58,21 +46,9 @@ const MaterialModule = [
     ...CdkModules,
     ...MaterialModule,
     CvRoutingModule,
-    FontAwesomeModule,
+    FontawesomeModule,
+    SkillBarModule,
   ],
-  declarations: [CvComponent, CvSectionComponent, SkillBarComponent],
+  declarations: [CvComponent, CvSectionComponent],
 })
-export class CvModule {
-  fontAwesomeIcons: IconDefinition[] = [
-    faGithub,
-    faLinkedin,
-    faLinkedinIn,
-    faTwitter,
-    faPaperPlane,
-    faAngular,
-  ];
-
-  constructor(library: FaIconLibrary) {
-    library.addIcons(...this.fontAwesomeIcons);
-  }
-}
+export class CvModule {}

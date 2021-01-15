@@ -54,22 +54,10 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 // import { MatTreeModule } from '@angular/material/tree';
 import { MatInputModule } from '@angular/material/input';
 
-// Fontawesome
-import {
-  FaIconLibrary,
-  FontAwesomeModule,
-} from '@fortawesome/angular-fontawesome';
-import {
-  faAngular,
-  faGithub,
-  faLinkedin,
-  faLinkedinIn,
-  faTwitter,
-  IconDefinition,
-} from '@fortawesome/free-brands-svg-icons';
-import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import { FontawesomeModule } from '@portfolio/shared';
 
 import { AppRoutingModule } from './app-routing.module';
+// Components
 import { AppComponent } from './app.component';
 import { RootNavigationComponent } from './root-navigation/root-navigation.component';
 import { HomeComponent } from './home/home.component';
@@ -145,7 +133,7 @@ const MaterialModule = [
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    FontAwesomeModule,
+    FontawesomeModule,
     ReactiveFormsModule,
     ...CdkModules,
     ...MaterialModule,
@@ -154,17 +142,4 @@ const MaterialModule = [
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {
-  fontAwesomeIcons: IconDefinition[] = [
-    faGithub,
-    faLinkedin,
-    faLinkedinIn,
-    faTwitter,
-    faPaperPlane,
-    faAngular,
-  ];
-
-  constructor(library: FaIconLibrary) {
-    library.addIcons(...this.fontAwesomeIcons);
-  }
-}
+export class AppModule {}
