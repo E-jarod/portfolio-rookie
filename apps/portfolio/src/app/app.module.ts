@@ -60,7 +60,6 @@ import { AppRoutingModule } from './app-routing.module';
 // Components
 import { AppComponent } from './app.component';
 import { RootNavigationComponent } from './root-navigation/root-navigation.component';
-import { TechWatchComponent } from './tech-watch/tech-watch.component';
 import { ContactComponent } from './contact/contact.component';
 import { ErrorComponent } from './error/error.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
@@ -128,7 +127,6 @@ const MaterialModules = [
   declarations: [
     AppComponent,
     RootNavigationComponent,
-    TechWatchComponent,
     ContactComponent,
     ErrorComponent,
     ContactFormComponent,

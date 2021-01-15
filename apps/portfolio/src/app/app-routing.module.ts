@@ -34,7 +34,10 @@ const routes: Routes = [
   },
   {
     path: 'tech-watch',
-    component: TechWatchComponent,
+    loadChildren: () =>
+      import('./tech-watch/tech-watch.module').then(
+        (m) => m.TechWatchModule
+      ),
   },
   {
     path: 'contact',
