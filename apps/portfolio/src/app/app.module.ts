@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -10,7 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { DragDropModule } from '@angular/cdk/drag-drop';
 // import { PortalModule } from '@angular/cdk/portal';
 // import { ScrollingModule } from '@angular/cdk/scrolling';
-import { CdkStepperModule } from '@angular/cdk/stepper';
+// import { CdkStepperModule } from '@angular/cdk/stepper';
 // import { CdkTableModule } from '@angular/cdk/table';
 // import { CdkTreeModule } from '@angular/cdk/tree';
 
@@ -60,27 +59,20 @@ import { AppRoutingModule } from './app-routing.module';
 // Components
 import { AppComponent } from './app.component';
 import { RootNavigationComponent } from './root-navigation/root-navigation.component';
-import { HomeComponent } from './home/home.component';
-import { TechWatchComponent } from './tech-watch/tech-watch.component';
-import { ContactComponent } from './contact/contact.component';
-import { CoursesComponent } from './courses/courses.component';
-import { SkillsComponent } from './skills/skills.component';
-import { ErrorComponent } from './error/error.component';
-import { ContactFormComponent } from './contact-form/contact-form.component';
 
-const CdkModules = [
-  // LayoutModule,
-  // A11yModule,
-  // ClipboardModule,
-  // DragDropModule,
-  // PortalModule,
-  // ScrollingModule,
-  CdkStepperModule,
-  // CdkTableModule,
-  // CdkTreeModule,
-];
+// const CdkModules = [
+//   // LayoutModule,
+//   // A11yModule,
+//   // ClipboardModule,
+//   // DragDropModule,
+//   // PortalModule,
+//   // ScrollingModule,
+//   CdkStepperModule,
+//   // CdkTableModule,
+//   // CdkTreeModule,
+// ];
 
-const MaterialModule = [
+const MaterialModules = [
   // MatAutocompleteModule,
   // MatBadgeModule,
   // MatBottomSheetModule,
@@ -119,26 +111,14 @@ const MaterialModule = [
 ];
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    RootNavigationComponent,
-    HomeComponent,
-    TechWatchComponent,
-    ContactComponent,
-    CoursesComponent,
-    SkillsComponent,
-    ErrorComponent,
-    ContactFormComponent,
-  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    ...MaterialModules,
     FontawesomeModule,
-    ReactiveFormsModule,
-    ...CdkModules,
-    ...MaterialModule,
     AppRoutingModule,
   ],
+  declarations: [AppComponent, RootNavigationComponent],
   providers: [],
   bootstrap: [AppComponent],
 })

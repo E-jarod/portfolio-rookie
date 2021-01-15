@@ -1,13 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { HomeComponent } from './home/home.component';
-import { ContactComponent } from './contact/contact.component';
-import { CoursesComponent } from './courses/courses.component';
-import { SkillsComponent } from './skills/skills.component';
-import { TechWatchComponent } from './tech-watch/tech-watch.component';
-import { ErrorComponent } from './error/error.component';
-
 const routes: Routes = [
   {
     path: '',
@@ -16,7 +9,8 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    component: HomeComponent,
+    loadChildren: () =>
+      import('./home/home.module').then((m) => m.HomeModule),
   },
   {
     path: 'cv',
@@ -25,23 +19,30 @@ const routes: Routes = [
   },
   {
     path: 'skills',
-    component: SkillsComponent,
+    loadChildren: () =>
+      import('./skills/skills.module').then((m) => m.SkillsModule),
   },
   {
     path: 'courses',
-    component: CoursesComponent,
+    loadChildren: () =>
+      import('./courses/courses.module').then((m) => m.CoursesModule),
   },
   {
     path: 'tech-watch',
-    component: TechWatchComponent,
+    loadChildren: () =>
+      import('./tech-watch/tech-watch.module').then(
+        (m) => m.TechWatchModule
+      ),
   },
   {
     path: 'contact',
-    component: ContactComponent,
+    loadChildren: () =>
+      import('./contact/contact.module').then((m) => m.ContactModule),
   },
   {
     path: '**',
-    component: ErrorComponent,
+    loadChildren: () =>
+      import('./error/error.module').then((m) => m.ErrorModule),
   },
 ];
 
