@@ -63,7 +63,6 @@ import { RootNavigationComponent } from './root-navigation/root-navigation.compo
 import { HomeComponent } from './home/home.component';
 import { TechWatchComponent } from './tech-watch/tech-watch.component';
 import { ContactComponent } from './contact/contact.component';
-import { SkillsComponent } from './skills/skills.component';
 import { ErrorComponent } from './error/error.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 
@@ -79,7 +78,7 @@ const CdkModules = [
   // CdkTreeModule,
 ];
 
-const MaterialModule = [
+const MaterialModules = [
   // MatAutocompleteModule,
   // MatBadgeModule,
   // MatBottomSheetModule,
@@ -118,24 +117,23 @@ const MaterialModule = [
 ];
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    RootNavigationComponent,
-    HomeComponent,
-    TechWatchComponent,
-    ContactComponent,
-    SkillsComponent,
-    ErrorComponent,
-    ContactFormComponent,
-  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     FontawesomeModule,
     ReactiveFormsModule,
     ...CdkModules,
-    ...MaterialModule,
+    ...MaterialModules,
     AppRoutingModule,
+  ],
+  declarations: [
+    AppComponent,
+    RootNavigationComponent,
+    HomeComponent,
+    TechWatchComponent,
+    ContactComponent,
+    ErrorComponent,
+    ContactFormComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],
