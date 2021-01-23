@@ -48,10 +48,9 @@
               "outputHashing": "all",
               "sourceMap": false,
               "namedChunks": false,
-							"extractCss": true,
               "extractLicenses": true,
               "vendorChunk": false,
-              "buildOptimizer": true,
+              "buildOptimizer": false,
 							"aot": true,
               "budgets": [
                 {
