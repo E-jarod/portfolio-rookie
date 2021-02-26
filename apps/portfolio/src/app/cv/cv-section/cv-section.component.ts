@@ -7,6 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CvSectionComponent implements OnInit {
   @Input() title = '';
+	@Input() titleClasses = Array<string>();
+	@Input() sectionClasses = Array<string>();
 
   constructor() {}
 

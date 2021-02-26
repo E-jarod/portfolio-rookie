@@ -6,16 +6,12 @@
 
 <h1 class="mat-h1">CV</h1>
 
-<mat-grid-list cols="1" rowHeight="300px">
-  <mat-grid-tile
-    class="border-red-500 shadow-2xl center"
-    colspan="1"
-    rowspan="4"
-  >
-    <!-- 2480x3508 -->
+<!-- 2480x3508 -->
+<div class="flex justify-center p-0">
+  <div class="transition-all shadow-lg hover:shadow-2xl">
     <mat-card
       id="cv"
-      class="flex flex-col justify-start w-full h-full"
+      class="flex flex-col justify-start w-full h-full bg-gray-200"
     >
       <mat-card-header class="py-3 bg-blue-50 rounded-xl">
         <div class="flex flex-start">
@@ -41,26 +37,30 @@
         </div>
       </mat-card-header>
       <mat-card-content
-        class="flex flex-row justify-between xl:items-center xl:flex-row xl:mt-8 px-0"
+        class="flex flex-row justify-between px-0 xl:items-center xl:flex-row xl:mt-8"
       >
-        <div class="flex-col col-span-1">
+        <div class="flex-col col-span-1 pr-3">
           <!-- Targets -->
           <portfolio-cv-section [title]="'Objectifs'">
           </portfolio-cv-section>
           <!-- Skills -->
-          <portfolio-cv-section [title]="'Compétences'">
+          <portfolio-cv-section
+						[titleClasses]="['text-red-500']"
+            [sectionClasses]="['bg-red-50']"
+            [title]="'Compétences'"
+          >
             <div
-              class="flex flex-col justify-start flex-grow rounded-lg oswald m-0 p-0"
+              class="flex flex-col justify-start flex-grow p-0 m-0 rounded-lg oswald"
             >
               <mat-list
-                class="flex-grow max-w-2xl p-3 rounded-xl bg-red-50 xl:ml-8"
+                class="flex-grow max-w-2xl p-3 rounded-xl"
               >
                 <mat-list-item>
                   <portfolio-skill-bar
                     [skillName]="'Angular'"
                     [color]="'warn'"
                     [mode]="'buffer'"
-										[value]="50"
+                    [value]="50"
                     [bufferValue]="90"
                   ></portfolio-skill-bar>
                 </mat-list-item>
@@ -69,7 +69,7 @@
                     [skillName]="'Flutter'"
                     [color]="'primary'"
                     [mode]="'buffer'"
-										[value]="20"
+                    [value]="20"
                     [bufferValue]="80"
                   ></portfolio-skill-bar>
                   <!--									<div-->
@@ -92,10 +92,10 @@
           <portfolio-cv-section [title]="'Langues'">
           </portfolio-cv-section>
         </div>
-        <div class="col-span-2 flex-col">
+        <div class="flex-col col-span-2">
           <!-- Experiences -->
           <portfolio-cv-section [title]="'Expériences'">
-            <h5 class="mat-h5 oswald text-center">
+            <h5 class="text-center mat-h5 oswald">
               <b>
                 2019 - 2021 | PASS Technologie, Paris | Développeur
                 Angular <em>(Alternance)</em>
@@ -111,7 +111,7 @@
               <li>Refonte du site web de Correlyce en Angular</li>
             </ul>
 
-            <h5 class="mat-h5 oswald text-center">
+            <h5 class="text-center mat-h5 oswald">
               <b
                 >2019 | Lycée Jean Rostand, Villepinte | Projet de SI
                 (T<sup>le</sup>S SI)</b
@@ -131,6 +131,7 @@
           </portfolio-cv-section>
           <!-- Studies -->
           <portfolio-cv-section [title]="'Formations'">
+            CFA INSTA
           </portfolio-cv-section>
           <!-- Interests -->
           <portfolio-cv-section [title]="'Centres d\'intérêts'">
@@ -182,8 +183,8 @@
         </div>
       </mat-card-actions>
     </mat-card>
-  </mat-grid-tile>
-</mat-grid-list>
+  </div>
+</div>
 
 <button
   mat-raised-button
