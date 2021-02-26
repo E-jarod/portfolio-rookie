@@ -9,12 +9,30 @@ import {
 import {
   faAngular,
   faGithub,
+  faGoogleDrive,
+  faHtml5,
+  faJava,
+  faJs,
   faLinkedin,
   faLinkedinIn,
+  faNodeJs,
+  faPhp,
+  faPython,
+  faReact,
+  faStackOverflow,
   faTwitter,
+  faVuejs,
   IconDefinition,
 } from '@fortawesome/free-brands-svg-icons';
-import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import {
+  faBirthdayCake,
+  faCode,
+  faDatabase,
+  faDove,
+  faEnvelope,
+  faPaperPlane,
+  faPhone,
+} from '@fortawesome/free-solid-svg-icons';
 
 @NgModule({
   declarations: [],
@@ -29,6 +47,22 @@ export class FontawesomeModule {
     faTwitter,
     faPaperPlane,
     faAngular,
+    faBirthdayCake,
+    faEnvelope,
+    faPhone,
+    faPhp,
+    faNodeJs,
+    faDove,
+    faCode,
+    faHtml5,
+    faJava,
+    faJs,
+    faDatabase,
+    faPython,
+    faVuejs,
+    faReact,
+    faStackOverflow,
+    faGoogleDrive,
   ];
 
   constructor(library: FaIconLibrary) {
