@@ -10,7 +10,7 @@ export class CvSkillsProgressBar implements ICvSkillsProgressBar {
     public name: string,
     public value: number,
     public bufferValue: number,
-		public color: ThemePalette,
+    public color: ThemePalette,
     public icon: IconProp
   ) {}
 }
@@ -24,5 +24,30 @@ export class BannerInfo {
 
   get data(): string {
     return this.text;
+  }
+}
+
+export class SocialInfo {
+  constructor(
+    private socialLink: string,
+    private socialIcon: IconProp,
+    private socialIconColor: string,
+    private socialId: string
+  ) {}
+
+	get color(): string {
+		return this.socialIconColor;
+	}
+
+  get link(): string {
+    return this.socialLink;
+  }
+
+  get icon(): IconProp {
+    return this.socialIcon;
+  }
+
+  get id(): string {
+    return this.socialId;
   }
 }

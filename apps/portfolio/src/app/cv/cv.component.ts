@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { CvSkillsProgressBar, BannerInfo } from './cv.model';
+import {
+  CvSkillsProgressBar,
+  BannerInfo,
+  SocialInfo,
+} from './cv.model';
 
 @Component({
   selector: 'portfolio-cv',
@@ -12,6 +16,10 @@ export class CvComponent implements OnInit {
   ngOnInit(): void {}
 
   print(): void {}
+
+  get targets(): string[] {
+    return ['Devenir un expert en informatique'];
+  }
 
   get frameworksSkills(): CvSkillsProgressBar[] {
     return [
@@ -44,13 +52,13 @@ export class CvComponent implements OnInit {
       // ]),
       new CvSkillsProgressBar('SQL', 40, 60, 'primary', 'database'),
       new CvSkillsProgressBar('Python', 20, 30, 'primary', [
-				'fab',
+        'fab',
         'python',
       ]),
-			new CvSkillsProgressBar('PHP', 40, 50, 'primary', [
-				'fab',
-				'php',
-			]),
+      new CvSkillsProgressBar('PHP', 40, 50, 'primary', [
+        'fab',
+        'php',
+      ]),
     ];
   }
 
@@ -68,6 +76,35 @@ export class CvComponent implements OnInit {
       new BannerInfo('envelope', 'ejilane.jarod@gmail.com'),
       new BannerInfo('phone', '07 68 45 86 63'),
       new BannerInfo('birthday-cake', '20 ans'),
+    ];
+  }
+
+  get socialInfos(): SocialInfo[] {
+    return [
+      new SocialInfo(
+        'https://github.com/E-jarod',
+        ['fab', 'github'],
+        'text-black',
+        'E-jarod'
+      ),
+      new SocialInfo(
+        'https://www.linkedin.com/in/e-jarod/',
+        ['fab', 'linkedin'],
+        'text-blue-800',
+        'Jarod EJILANE'
+      ),
+      new SocialInfo(
+        'https://twitter.com/E_jarod7',
+        ['fab', 'twitter'],
+        'text-blue-400',
+        'E_jarod7'
+      ),
+      new SocialInfo(
+        'https://stackoverflow.com/users/13041777/e-jarod',
+        ['fab', 'stack-overflow'],
+        'text-yellow-600',
+        '13041777'
+      ),
     ];
   }
 }
