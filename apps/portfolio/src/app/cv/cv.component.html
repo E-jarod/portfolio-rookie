@@ -11,7 +11,7 @@
   <div class="transition-all shadow-lg hover:shadow-2xl">
     <mat-card
       id="cv"
-      class="flex flex-col justify-between w-full h-full bg-gray-200"
+      class="flex flex-col justify-between w-full h-full bg-gray-200 roboto-condensed"
     >
       <div
         class="flex items-center justify-between p-3 mb-3 bg-blue-50 rounded-xl"
@@ -51,9 +51,8 @@
           <portfolio-cv-section [title]="'Objectifs'">
             <ul class="list-disc list-inside">
               <li
-                class="font-bold decor"
                 *ngFor="let target of targets"
-                [innerText]="target"
+                [innerHTML]="target"
               ></li>
             </ul>
           </portfolio-cv-section>
@@ -112,6 +111,15 @@
           </portfolio-cv-section>
           <!-- Languages -->
           <portfolio-cv-section [title]="'Langues'">
+						<div *ngFor="let language of languages">
+							<portfolio-skill-bar
+								[skillName]="language.name"
+								[icon]="language.icon"
+								[color]="language.color"
+								[value]="language.value"
+								[bufferValue]="language.bufferValue"
+							></portfolio-skill-bar>
+						</div>
           </portfolio-cv-section>
         </div>
         <div class="flex-col col-span-2">

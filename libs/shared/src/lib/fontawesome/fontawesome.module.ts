@@ -7,14 +7,18 @@ import {
 } from '@fortawesome/angular-fontawesome';
 // Icons
 import {
+	faAndroid,
   faAngular,
+	faGitAlt,
   faGithub,
+	faGitlab,
   faGoogleDrive,
   faHtml5,
   faJava,
   faJs,
   faLinkedin,
   faLinkedinIn,
+	faLinux,
   faNodeJs,
   faPhp,
   faPython,
@@ -30,6 +34,9 @@ import {
   faDatabase,
   faDove,
   faEnvelope,
+	faFlagUsa,
+	faGlobeAmericas,
+	faGlobeAsia,
   faPaperPlane,
   faPhone,
 } from '@fortawesome/free-solid-svg-icons';
@@ -63,6 +70,12 @@ export class FontawesomeModule {
     faReact,
     faStackOverflow,
     faGoogleDrive,
+		faGitAlt,
+		faGitlab,
+		faGlobeAmericas,
+		faGlobeAsia,
+		faLinux,
+		faAndroid,
   ];
 
   constructor(library: FaIconLibrary) {
