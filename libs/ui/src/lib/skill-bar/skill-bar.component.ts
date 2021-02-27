@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { ProgressBarMode } from '@angular/material/progress-bar';
 import { ThemePalette } from '@angular/material/core';
 
@@ -13,6 +14,7 @@ export class SkillBarComponent implements OnInit {
   @Input() mode: ProgressBarMode = 'buffer';
   @Input() value = 0;
   @Input() bufferValue = 0;
+	@Input() icon: IconProp = 'code';
 
   constructor() {}
 

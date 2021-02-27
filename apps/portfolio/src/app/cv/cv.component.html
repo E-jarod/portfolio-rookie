@@ -6,184 +6,257 @@
 
 <h1 class="mat-h1">CV</h1>
 
-<mat-grid-list cols="1" rowHeight="300px">
-  <mat-grid-tile
-    class="border-red-500 shadow-2xl center"
-    colspan="1"
-    rowspan="4"
-  >
-    <!-- 2480x3508 -->
+<!-- 2480x3508 -->
+<div class="flex justify-center p-0">
+  <div class="transition-all shadow-lg hover:shadow-2xl">
     <mat-card
       id="cv"
-      class="flex flex-col justify-start w-full h-full"
+      class="flex flex-col justify-between w-full h-full bg-gray-200 roboto-condensed"
     >
-      <mat-card-header class="py-3 bg-blue-50 rounded-xl">
-        <div class="flex flex-start">
+      <div
+        class="flex items-center justify-between p-3 mb-3 bg-blue-50 rounded-xl"
+      >
+        <div class="flex items-center">
           <div
-            class="flex-shrink-0 w-20 h-20 mr-3 bg-right bg-cover rounded-xl pp"
-            [style.backgroundImage]="'url(\'assets/meBeach_sm.jpg\')'"
+            class="flex-shrink-0 w-24 h-24 mr-3 bg-right bg-cover rounded-xl"
+            [style.backgroundImage]="
+              'url(\'assets/me20_square_sm.jpg\')'
+            "
           ></div>
-          <div>
-            <mat-card-title-group>
-              <mat-card-title class="text-2xl font-bold oswald"
-                >E-jarod
-              </mat-card-title>
-              <mat-card-subtitle class="text-2xl oswald">
-                Développeur
-                <b class="text-red-500">Angular</b> &
-                <b class="text-blue-500">Flutter</b>
-              </mat-card-subtitle>
-              <mat-card-subtitle class="oswald"
-                >19 ans | 03/02/2001
-              </mat-card-subtitle>
-            </mat-card-title-group>
+          <div class="flex flex-col items-start justify-between">
+            <div class="text-2xl font-bold text-blue-900 roboto">
+              EJILANE Jarod
+            </div>
+            <div class="text-2xl text-gray-800 roboto-condensed">
+              Développeur
+              <b class="text-red-500 share-tech">Angular</b> &
+              <b class="text-blue-500 share-tech">Flutter</b>
+            </div>
           </div>
         </div>
-      </mat-card-header>
-      <mat-card-content
-        class="flex flex-row justify-between xl:items-center xl:flex-row xl:mt-8 px-0"
-      >
-        <div class="flex-col col-span-1">
+        <div class="flex flex-col items-end justify-between h-full">
+          <div
+            *ngFor="let bannerInfo of bannerInfos"
+            class="text-lg font-bold text-gray-600 roboto"
+          >
+            {{ bannerInfo.data }}
+            <fa-icon [icon]="bannerInfo.icon"></fa-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-row justify-between h-full px-0">
+        <div class="flex-col col-span-1 pr-3">
           <!-- Targets -->
           <portfolio-cv-section [title]="'Objectifs'">
+            <ul class="text-base list-disc list-inside">
+              <li
+                *ngFor="let target of targets"
+                [innerHTML]="target"
+              ></li>
+            </ul>
           </portfolio-cv-section>
           <!-- Skills -->
-          <portfolio-cv-section [title]="'Compétences'">
+          <portfolio-cv-section
+            [isBgRed]="true"
+            [isRed]="true"
+            [title]="'Compétences'"
+          >
             <div
-              class="flex flex-col justify-start flex-grow rounded-lg oswald m-0 p-0"
+              class="flex flex-col justify-start flex-grow p-0 m-0 rounded-lg oswald"
             >
-              <mat-list
-                class="flex-grow max-w-2xl p-3 rounded-xl bg-red-50 xl:ml-8"
-              >
-                <mat-list-item>
+              <div class="flex-grow max-w-2xl px-3 py-1 rounded-xl">
+                <div class="font-bold text-center share-tech">
+                  Frameworks
+                </div>
+                <div *ngFor="let framework of frameworksSkills">
                   <portfolio-skill-bar
-                    [skillName]="'Angular'"
-                    [color]="'warn'"
-                    [mode]="'buffer'"
-										[value]="50"
-                    [bufferValue]="90"
+                    [skillName]="framework.name"
+                    [icon]="framework.icon"
+                    [color]="framework.color"
+                    [value]="framework.value"
+                    [bufferValue]="framework.bufferValue"
                   ></portfolio-skill-bar>
-                </mat-list-item>
-                <mat-list-item>
+                </div>
+              </div>
+              <div class="flex-grow max-w-2xl px-3 py-1 rounded-xl">
+                <div class="font-bold text-center share-tech">
+                  Languages
+                </div>
+                <div *ngFor="let language of languagesSkills">
                   <portfolio-skill-bar
-                    [skillName]="'Flutter'"
-                    [color]="'primary'"
-                    [mode]="'buffer'"
-										[value]="20"
-                    [bufferValue]="80"
+                    [skillName]="language.name"
+                    [icon]="language.icon"
+                    [color]="language.color"
+                    [value]="language.value"
+                    [bufferValue]="language.bufferValue"
                   ></portfolio-skill-bar>
-                  <!--									<div-->
-                  <!--                    class="flex items-center justify-center w-full"-->
-                  <!--                  >-->
-                  <!--                    <p class="m-0 text-lg w-60 oswald">Flutter</p>-->
-                  <!--                    <mat-progress-bar-->
-                  <!--                      [color]="'primary'"-->
-                  <!--                      [mode]="'buffer'"-->
-                  <!--                      [value]="20"-->
-                  <!--                      [bufferValue]="80"-->
-                  <!--                    >-->
-                  <!--                    </mat-progress-bar>-->
-                  <!--                  </div>-->
-                </mat-list-item>
-              </mat-list>
+                </div>
+              </div>
+              <div class="flex-grow max-w-2xl px-3 py-1 rounded-xl">
+                <div class="font-bold text-center share-tech">
+                  Autres
+                </div>
+                <div *ngFor="let other of otherSkills">
+                  <portfolio-skill-bar
+                    [skillName]="other.name"
+                    [icon]="other.icon"
+                    [color]="other.color"
+                    [value]="other.value"
+                    [bufferValue]="other.bufferValue"
+                  ></portfolio-skill-bar>
+                </div>
+              </div>
             </div>
           </portfolio-cv-section>
           <!-- Languages -->
           <portfolio-cv-section [title]="'Langues'">
+            <div class="flex-grow max-w-2xl px-3 rounded-xl">
+              <div *ngFor="let language of languages">
+                <portfolio-skill-bar
+                  [skillName]="language.name"
+                  [icon]="language.icon"
+                  [color]="language.color"
+                  [value]="language.value"
+                  [bufferValue]="language.bufferValue"
+                ></portfolio-skill-bar>
+              </div>
+            </div>
           </portfolio-cv-section>
         </div>
-        <div class="col-span-2 flex-col">
+        <div class="flex-col col-span-2">
           <!-- Experiences -->
           <portfolio-cv-section [title]="'Expériences'">
-            <h5 class="mat-h5 oswald text-center">
-              <b>
-                2019 - 2021 | PASS Technologie, Paris | Développeur
-                Angular <em>(Alternance)</em>
-              </b>
-            </h5>
-            <!-- <p class="mb-1">Développement Front avec Angular :</p> -->
-            <ul>
-              <li>
-                Application desktop en Electron permettant une
-                conception guidée de cloisons vitrées via une
-                interface en Angular.
-              </li>
-              <li>Refonte du site web de Correlyce en Angular</li>
-            </ul>
+            <div class="mb-3 text-base">
+              <h4 class="mb-1 text-red-900 roboto-condensed">
+                <b>
+                  2019-2021 | PASS Technologie, Paris | Développeur
+                  Angular <em>(Alternance)</em>
+                </b>
+              </h4>
+              <ul class="pl-3 list-disc list-inside">
+                <li>
+                  Application desktop permettant une conception guidée
+                  de cloisons vitrées : gestion de l'UI/UX -
+                  <em class="text-sm">Angular & Electron</em>.
+                </li>
+                <li>
+                  Refonte du site web de Correlyce en Angular :
+                  gestion de l'UI, state management -
+                  <em class="text-sm">Angular</em>.
+                </li>
+              </ul>
+            </div>
+            <div class="text-base">
+              <h4 class="mb-1 text-red-900 roboto-condensed">
+                <b>
+                  2020-2021 | <em>Remote avec des amis</em> |
+                  Développeur JS
+                  <em>(Temps libre)</em>
+                </b>
+              </h4>
+              <!-- <p>2 Projets scolaires :</p> -->
+              <ul class="pl-3 list-disc list-inside">
+                <li>
+                  Panel d'administration : administration d'une
+                  application mobile React Native à l'aide Angular.
+                </li>
+                <li>
+                  Application de gestion d'associations : aide à la
+                  planification de certains choix. Rôle de développeur
+                  fullstack React/Nestjs.
+                </li>
+                <li>
+                  Application de chat en ligne cross-platform :
+                  organisateur, avec des amis, de tout le projet.
+                  Frontend en Flutter, backend en ASP.NET.
+                </li>
+              </ul>
+            </div>
+          </portfolio-cv-section>
 
-            <h5 class="mat-h5 oswald text-center">
-              <b
-                >2019 | Lycée Jean Rostand, Villepinte | Projet de SI
-                (T<sup>le</sup>S SI)</b
-              >
-            </h5>
-            <!-- <p>2 Projets scolaires :</p> -->
-            <ul>
-              <li>
-                Projet informatique : programmer en python un robot
-                LEGO EV3 en binôme
-              </li>
-              <li>
-                Projet multiphysique : étudier le comportement
-                électrique et mécanique d'un skate électrique
-              </li>
-            </ul>
-          </portfolio-cv-section>
-          <!-- Studies -->
           <portfolio-cv-section [title]="'Formations'">
+            <div class="mb-2 text-base">
+              <h4 class="mb-1 text-red-900 roboto-condensed">
+                <b>
+                  2019-2021 | CFA INSTA, Paris 2e |
+                  <em>(En cours)</em>
+                </b>
+              </h4>
+              <p class="pl-1 mb-1">
+                <b>BTS SIO</b> -
+                <em class="text-sm"
+                  >Services Informatiques aux Organisations</em
+                >
+                <br />
+                | option <b>SLAM</b> -
+                <em class="text-sm"
+                  >Solutions Logicielles et Applications Métier</em
+                >
+              </p>
+              <ul class="pl-3 list-disc list-inside">
+                <li>
+                  Java : Bases, Android, Swing/JavaFX, API REST…
+                </li>
+                <li>PHP : Bases, API REST, Architecture 3 tiers…</li>
+                <li>SQL : Bases, Triggers, Vues, MCD/UML…</li>
+              </ul>
+            </div>
+            <div class="text-base">
+              <h4 class="mb-1 text-red-900 roboto-condensed">
+                <b> 2018-2019 | Lycée Jean Rostand, Villepinte </b>
+              </h4>
+              <p class="pl-1">
+                <b>Bac S</b> | option <b>SI</b> -
+                <em class="text-sm">Sciences de l'Ingénieur</em><br />
+                | spécialité <b>ISN</b> -
+                <em class="text-sm"
+                  >Informatique et Sciences du Numérique</em
+                ><br />
+                | Mention : <em><b>Bien</b></em>
+              </p>
+            </div>
           </portfolio-cv-section>
-          <!-- Interests -->
+
           <portfolio-cv-section [title]="'Centres d\'intérêts'">
-            <p>
-              Développement | Sciences & Mathématiques | Sports
-              (Basketball) | Cuisine Indienne | Veille Technologique
-            </p>
+            <div
+              class="flex flex-wrap items-center justify-between text-base"
+            >
+              <div *ngFor="let interest of interests">
+                <fa-icon
+                  class="mr-1"
+                  [icon]="interest.icon"
+                ></fa-icon>
+                <span [innerText]="interest.name"></span>
+              </div>
+            </div>
           </portfolio-cv-section>
         </div>
-      </mat-card-content>
-      <mat-card-actions>
-        <div>
-          <a
-            mat-icon-button
-            class="mr-px md:mr-4"
-            href="https://github.com/E-jarod"
-            target="_blank"
-            rel="noopener noreferer"
-          >
-            <fa-icon
-              class="sm:text-3xl"
-              [icon]="['fab', 'github']"
-            ></fa-icon>
-          </a>
-          <a
-            mat-icon-button
-            class="mr-px md:mr-4"
-            href="https://www.linkedin.com/in/e-jarod/"
-            target="_blank"
-            rel="noopener noreferer"
-          >
-            <fa-icon
-              class="sm:text-3xl"
-              [icon]="['fab', 'linkedin']"
-            ></fa-icon>
-          </a>
-          <a
-            mat-icon-button
-            class="mr-px md:mr-4"
-            href="https://twitter.com/E_jarod7"
-            target="_blank"
-            rel="noopener noreferer"
-          >
-            <fa-icon
-              class="sm:text-3xl"
-              [icon]="['fab', 'twitter']"
-            ></fa-icon>
-          </a>
-        </div>
-      </mat-card-actions>
+      </div>
+
+      <div class="flex items-center justify-around">
+        <a
+          *ngFor="let socialInfo of socialInfos"
+          mat-icon-button
+          class="flex flex-col items-center justify-between p-1 text-center bg-white hover:shadow-xl w-28 rounded-2xl"
+          href="socialInfo.link"
+          target="_blank"
+          rel="noopener noreferer"
+        >
+          <fa-icon
+            class="mb-2 text-3xl"
+            [ngClass]="socialInfo.color"
+            [icon]="socialInfo.icon"
+          ></fa-icon>
+          <span
+            class="font-bold roboto"
+            [innerText]="socialInfo.id"
+          ></span>
+        </a>
+      </div>
     </mat-card>
-  </mat-grid-tile>
-</mat-grid-list>
+  </div>
+</div>
 
 <button
   mat-raised-button

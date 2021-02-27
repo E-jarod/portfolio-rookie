@@ -1,14 +1,26 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'portfolio-cv-section',
   templateUrl: './cv-section.component.html',
   styleUrls: ['./cv-section.component.scss'],
 })
-export class CvSectionComponent implements OnInit {
+export class CvSectionComponent {
   @Input() title = '';
+  @Input() isRed = false;
+  @Input() isBgRed = false;
 
-  constructor() {}
+  get titleClasses() {
+    return {
+      'text-blue-700': !this.isRed,
+      'text-red-500': this.isRed,
+    };
+  }
 
-  ngOnInit(): void {}
+  get sectionClasses() {
+    return {
+      'bg-red-50': this.isBgRed,
+      'bg-white': !this.isBgRed,
+    };
+  }
 }
