@@ -29,7 +29,9 @@ import {
   IconDefinition,
 } from '@fortawesome/free-brands-svg-icons';
 import {
+	faBasketballBall,
   faBirthdayCake,
+	faBook,
   faCode,
   faDatabase,
   faDove,
@@ -39,6 +41,8 @@ import {
 	faGlobeAsia,
   faPaperPlane,
   faPhone,
+	faSquareRootAlt,
+	faUtensils,
 } from '@fortawesome/free-solid-svg-icons';
 
 @NgModule({
@@ -76,6 +80,10 @@ export class FontawesomeModule {
 		faGlobeAsia,
 		faLinux,
 		faAndroid,
+		faBasketballBall,
+		faSquareRootAlt,
+		faUtensils,
+		faBook,
   ];
 
   constructor(library: FaIconLibrary) {

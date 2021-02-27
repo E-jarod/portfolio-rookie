@@ -3,6 +3,7 @@ import {
   CvSkillsProgressBar,
   BannerInfo,
   SocialInfo,
+  InterestInfo,
 } from './cv.model';
 
 @Component({
@@ -28,7 +29,7 @@ export class CvComponent {
         'fab',
         'angular',
       ]),
-      new CvSkillsProgressBar('Vue', 30, 70, 'warn', [
+      new CvSkillsProgressBar('Vue', 30, 60, 'warn', [
         'fab',
         'vuejs',
       ]),
@@ -107,7 +108,7 @@ export class CvComponent {
       new SocialInfo(
         'https://gitlab.com/E-jarod',
         ['fab', 'gitlab'],
-        'text-yellow-500',
+        'text-yellow-600',
         'E-jarod'
       ),
       new SocialInfo(
@@ -147,6 +148,16 @@ export class CvComponent {
         'primary',
         'globe-asia'
       ),
+    ];
+  }
+
+  get interests(): InterestInfo[] {
+    return [
+      new InterestInfo('Développement', 'code'),
+      new InterestInfo('Veille Technologique', 'book'),
+      new InterestInfo('Sciences & Mathématiques', 'square-root-alt'),
+      new InterestInfo('Sports (Basketball)', 'basketball-ball'),
+      new InterestInfo('Cuisine Indienne', 'utensils'),
     ];
   }
 }

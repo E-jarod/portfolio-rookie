@@ -51,3 +51,18 @@ export class SocialInfo {
     return this.socialId;
   }
 }
+
+export class InterestInfo {
+	constructor(
+		private interestName: string,
+		private interestIcon: IconProp,
+	) {}
+
+	get name(): string {
+		return this.interestName;
+	}
+
+	get icon(): IconProp {
+		return this.interestIcon;
+	}
+}
