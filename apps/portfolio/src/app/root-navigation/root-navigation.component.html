@@ -9,12 +9,13 @@
   >
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item [routerLink]="['/home']">Accueil</a>
-      <a mat-list-item [routerLink]="['/cv']">CV</a>
-      <a mat-list-item [routerLink]="['/skills']">Compétences</a>
-      <a mat-list-item [routerLink]="['/courses']">Formations</a>
-      <a mat-list-item [routerLink]="['/tech-watch']">Veille</a>
-      <a mat-list-item [routerLink]="['/contact']">Contact</a>
+      <a
+        *ngFor="let link of links"
+        mat-list-item
+        [routerLink]="link.path"
+      >
+        {{ link.label }}
+      </a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -27,47 +28,26 @@
           (click)="drawer.toggle()"
           *ngIf="isHandset$ | async"
         >
-          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+          <mat-icon aria-label="SidesocInfonav toggle icon">
+            menu
+          </mat-icon>
         </button>
-        <span class="text-xs font-bold oswald sm:text-base"
-          >EJILANE Jarod | Portfolio</span
-        >
+        <span class="text-xs font-bold roboto sm:text-base">
+          EJILANE Jarod
+        </span>
       </div>
       <div>
         <a
+          *ngFor="let socialInfo of socialInfos"
           mat-icon-button
           class="mr-px md:mr-4"
-          href="https://github.com/E-jarod"
+          [href]="socialInfo.link"
           target="_blank"
           rel="noopener noreferer"
         >
           <fa-icon
             class="text-white sm:text-3xl"
-            [icon]="['fab', 'github']"
-          ></fa-icon>
-        </a>
-        <a
-          mat-icon-button
-          class="mr-px md:mr-4"
-          href="https://www.linkedin.com/in/e-jarod/"
-          target="_blank"
-          rel="noopener noreferer"
-        >
-          <fa-icon
-            class="text-white sm:text-3xl"
-            [icon]="['fab', 'linkedin']"
-          ></fa-icon>
-        </a>
-        <a
-          mat-icon-button
-          class="mr-px md:mr-4"
-          href="https://twitter.com/E_jarod7"
-          target="_blank"
-          rel="noopener noreferer"
-        >
-          <fa-icon
-            class="text-white sm:text-3xl"
-            [icon]="['fab', 'twitter']"
+            [icon]="socialInfo.icon"
           ></fa-icon>
         </a>
       </div>
