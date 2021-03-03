@@ -1,11 +1,11 @@
 import { ThemePalette } from '@angular/material/core';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
-interface ICvSkillsProgressBar {
+interface ICvSkill {
   name: string;
   value: number;
   bufferValue: number;
 }
-export class CvSkillsProgressBar implements ICvSkillsProgressBar {
+export class CvSkill implements ICvSkill {
   constructor(
     public name: string,
     public value: number,
@@ -17,17 +17,17 @@ export class CvSkillsProgressBar implements ICvSkillsProgressBar {
 
 export class CvSkillsGroup {
   constructor(
-    private cvSkillsGroup: CvSkillsProgressBar[],
-    private cvSkillsGroupsName: string
+    private cvSkillsGroupsName: string,
+    private cvSkillsGroup: CvSkill[]
   ) {}
 
-	get skills(): CvSkillsProgressBar[] {
-		return this.cvSkillsGroup;
-	}
+  get name(): string {
+    return this.cvSkillsGroupsName;
+  }
 
-	get name(): string {
-		return this.cvSkillsGroupsName;
-	}
+  get skills(): CvSkill[] {
+    return this.cvSkillsGroup;
+  }
 }
 
 export class BannerInfo {
