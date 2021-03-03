@@ -15,6 +15,21 @@ export class CvSkillsProgressBar implements ICvSkillsProgressBar {
   ) {}
 }
 
+export class CvSkillsGroup {
+  constructor(
+    private cvSkillsGroup: CvSkillsProgressBar[],
+    private cvSkillsGroupsName: string
+  ) {}
+
+	get skills(): CvSkillsProgressBar[] {
+		return this.cvSkillsGroup;
+	}
+
+	get name(): string {
+		return this.cvSkillsGroupsName;
+	}
+}
+
 export class BannerInfo {
   constructor(private faIcon: IconProp, private text: string) {}
 
@@ -35,9 +50,9 @@ export class SocialInfo {
     private socialId: string
   ) {}
 
-	get color(): string {
-		return this.socialIconColor;
-	}
+  get color(): string {
+    return this.socialIconColor;
+  }
 
   get link(): string {
     return this.socialLink;
@@ -53,16 +68,16 @@ export class SocialInfo {
 }
 
 export class InterestInfo {
-	constructor(
-		private interestName: string,
-		private interestIcon: IconProp,
-	) {}
+  constructor(
+    private interestName: string,
+    private interestIcon: IconProp
+  ) {}
 
-	get name(): string {
-		return this.interestName;
-	}
+  get name(): string {
+    return this.interestName;
+  }
 
-	get icon(): IconProp {
-		return this.interestIcon;
-	}
+  get icon(): IconProp {
+    return this.interestIcon;
+  }
 }
