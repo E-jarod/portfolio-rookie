@@ -1,11 +1,11 @@
 import { ThemePalette } from '@angular/material/core';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
-interface ICvSkillsProgressBar {
+interface ICvSkill {
   name: string;
   value: number;
   bufferValue: number;
 }
-export class CvSkillsProgressBar implements ICvSkillsProgressBar {
+export class CvSkill implements ICvSkill {
   constructor(
     public name: string,
     public value: number,
@@ -13,6 +13,21 @@ export class CvSkillsProgressBar implements ICvSkillsProgressBar {
     public color: ThemePalette,
     public icon: IconProp
   ) {}
+}
+
+export class CvSkillsGroup {
+  constructor(
+    private cvSkillsGroupsName: string,
+    private cvSkillsGroup: CvSkill[]
+  ) {}
+
+  get name(): string {
+    return this.cvSkillsGroupsName;
+  }
+
+  get skills(): CvSkill[] {
+    return this.cvSkillsGroup;
+  }
 }
 
 export class BannerInfo {
@@ -35,9 +50,9 @@ export class SocialInfo {
     private socialId: string
   ) {}
 
-	get color(): string {
-		return this.socialIconColor;
-	}
+  get color(): string {
+    return this.socialIconColor;
+  }
 
   get link(): string {
     return this.socialLink;
@@ -53,16 +68,16 @@ export class SocialInfo {
 }
 
 export class InterestInfo {
-	constructor(
-		private interestName: string,
-		private interestIcon: IconProp,
-	) {}
+  constructor(
+    private interestName: string,
+    private interestIcon: IconProp
+  ) {}
 
-	get name(): string {
-		return this.interestName;
-	}
+  get name(): string {
+    return this.interestName;
+  }
 
-	get icon(): IconProp {
-		return this.interestIcon;
-	}
+  get icon(): IconProp {
+    return this.interestIcon;
+  }
 }

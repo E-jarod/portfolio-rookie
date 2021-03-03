@@ -3,10 +3,10 @@ import { CommonModule } from '@angular/common';
 // CDK modules
 import { CdkStepperModule } from '@angular/cdk/stepper';
 // Material modules
+import { MatButtonModule } from '@angular/material/button';
+
 import { MatCardModule } from '@angular/material/card';
-import { MatGridListModule } from '@angular/material/grid-list';
 import { MatListModule } from '@angular/material/list';
-import { MatStepperModule } from '@angular/material/stepper';
 
 import { SkillBarModule } from '@portfolio/ui';
 import { FontawesomeModule } from '@portfolio/shared';
@@ -19,9 +19,8 @@ const CdkModules = [CdkStepperModule];
 
 const MaterialModules = [
   MatCardModule,
-  MatGridListModule,
   MatListModule,
-  MatStepperModule,
+  MatButtonModule,
 ];
 
 @NgModule({

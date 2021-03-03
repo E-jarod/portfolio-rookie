@@ -1,10 +1,15 @@
-<!-- <h1 class="w-1/6 p-5 bg-yellow-200 rounded-br-full mat-h1">CV en préparation</h1>
-
-<div class="absolute inset-x-0 bottom-0 flex justify-center">
-	<img class="max-w-full max-h-full" [src]="'assets/work_in_progress.svg'" alt="">
-</div> -->
-
-<h1 class="mat-h1">CV</h1>
+<div class="flex justify-between">
+  <h1 class="mat-h1">CV</h1>
+  <button
+    mat-raised-button
+    color="warn"
+    role="button"
+		disabled
+    (click)="print()"
+  >
+    Open PDF
+  </button>
+</div>
 
 <!-- 2480x3508 -->
 <div class="flex justify-center p-0">
@@ -56,59 +61,36 @@
               ></li>
             </ul>
           </portfolio-cv-section>
+
           <!-- Skills -->
           <portfolio-cv-section
+            [title]="'Compétences'"
             [isBgRed]="true"
             [isRed]="true"
-            [title]="'Compétences'"
           >
             <div
               class="flex flex-col justify-start flex-grow p-0 m-0 rounded-lg oswald"
             >
-              <div class="flex-grow max-w-2xl px-3 py-1 rounded-xl">
-                <div class="font-bold text-center share-tech">
-                  Frameworks
-                </div>
-                <div *ngFor="let framework of frameworksSkills">
-                  <portfolio-skill-bar
-                    [skillName]="framework.name"
-                    [icon]="framework.icon"
-                    [color]="framework.color"
-                    [value]="framework.value"
-                    [bufferValue]="framework.bufferValue"
-                  ></portfolio-skill-bar>
-                </div>
-              </div>
-              <div class="flex-grow max-w-2xl px-3 py-1 rounded-xl">
-                <div class="font-bold text-center share-tech">
-                  Languages
-                </div>
-                <div *ngFor="let language of languagesSkills">
-                  <portfolio-skill-bar
-                    [skillName]="language.name"
-                    [icon]="language.icon"
-                    [color]="language.color"
-                    [value]="language.value"
-                    [bufferValue]="language.bufferValue"
-                  ></portfolio-skill-bar>
-                </div>
-              </div>
-              <div class="flex-grow max-w-2xl px-3 py-1 rounded-xl">
-                <div class="font-bold text-center share-tech">
-                  Autres
-                </div>
-                <div *ngFor="let other of otherSkills">
-                  <portfolio-skill-bar
-                    [skillName]="other.name"
-                    [icon]="other.icon"
-                    [color]="other.color"
-                    [value]="other.value"
-                    [bufferValue]="other.bufferValue"
-                  ></portfolio-skill-bar>
-                </div>
+              <div
+                *ngFor="let skillsGroup of skillsGroups"
+                class="flex-grow max-w-2xl px-3 rounded-xl"
+              >
+                <div
+                  class="font-bold text-center share-tech"
+                  [innerText]="skillsGroup.name"
+                ></div>
+                <portfolio-skill-bar
+                  *ngFor="let skill of skillsGroup.skills"
+                  [skillName]="skill.name"
+                  [icon]="skill.icon"
+                  [color]="skill.color"
+                  [value]="skill.value"
+                  [bufferValue]="skill.bufferValue"
+                ></portfolio-skill-bar>
               </div>
             </div>
           </portfolio-cv-section>
+
           <!-- Languages -->
           <portfolio-cv-section [title]="'Langues'">
             <div class="flex-grow max-w-2xl px-3 rounded-xl">
@@ -124,6 +106,7 @@
             </div>
           </portfolio-cv-section>
         </div>
+
         <div class="flex-col col-span-2">
           <!-- Experiences -->
           <portfolio-cv-section [title]="'Expériences'">
@@ -237,9 +220,8 @@
       <div class="flex items-center justify-around">
         <a
           *ngFor="let socialInfo of socialInfos"
-          mat-icon-button
           class="flex flex-col items-center justify-between p-1 text-center bg-white hover:shadow-xl w-28 rounded-2xl"
-          href="socialInfo.link"
+          [href]="socialInfo.link"
           target="_blank"
           rel="noopener noreferer"
         >
@@ -257,12 +239,3 @@
     </mat-card>
   </div>
 </div>
-
-<button
-  mat-raised-button
-  color="warn"
-  role="button"
-  (click)="print()"
->
-  Open PDF
-</button>
