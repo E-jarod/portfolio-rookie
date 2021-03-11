@@ -40,6 +40,21 @@
         <mat-card-content
           class="flex justify-center flex-grow rounded-lg"
         >
+          <div
+            class="flex flex-col justify-start flex-grow max-w-2xl p-3 m-0 xl:ml-8 rounded-xl bg-red-50 oswald"
+          >
+            <div class="grid grid-cols-1 gap-4">
+              <portfolio-skill-bar
+                *ngFor="let skill of skills"
+                [skillName]="skill.name"
+                [icon]="skill.icon"
+                [color]="skill.color"
+                [value]="skill.value"
+                [bufferValue]="skill.bufferValue"
+								[vertical]="false"
+              ></portfolio-skill-bar>
+            </div>
+          </div>
           <mat-list
             class="flex-grow max-w-2xl p-3 rounded-xl bg-red-50 xl:ml-8"
           >

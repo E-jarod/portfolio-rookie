@@ -31,12 +31,9 @@ export class CvComponent {
   private _languagesSkills: CvSkill[] = [
     new CvSkill('TS/JS', 70, 90, 'warn', ['fab', 'js']),
     new CvSkill('Java', 50, 70, 'accent', ['fab', 'java']),
-    // new CvSkill('HTML/CSS', 90, 100, 'warn', [
-    // 	'fab',
-    // 	'html5',
-    // ]),
-    new CvSkill('SQL', 40, 60, 'primary', 'database'),
+    new CvSkill('Sass', 50, 60, 'warn', ['fab', 'sass']),
     new CvSkill('Python', 20, 30, 'primary', ['fab', 'python']),
+    new CvSkill('SQL', 40, 60, 'primary', 'database'),
     new CvSkill('PHP', 40, 50, 'primary', ['fab', 'php']),
   ];
   private _otherSkills: CvSkill[] = [

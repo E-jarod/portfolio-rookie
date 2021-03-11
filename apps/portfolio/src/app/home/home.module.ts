@@ -6,6 +6,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatListModule } from '@angular/material/list';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 
+import { SkillBarModule } from '@portfolio/ui';
 import { HomeRoutingModule } from './home-routing.module';
 // Components
 import { HomeComponent } from './home.component';
@@ -22,6 +23,7 @@ const MaterialModules = [
     CommonModule,
     HomeRoutingModule,
     ...MaterialModules,
+		SkillBarModule,
   ],
   declarations: [HomeComponent],
 })

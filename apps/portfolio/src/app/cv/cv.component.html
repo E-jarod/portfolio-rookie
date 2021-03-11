@@ -19,7 +19,7 @@
       class="flex flex-col justify-between w-full h-full bg-gray-200 roboto-condensed"
     >
       <div
-        class="flex items-center justify-between p-3 mb-3 bg-blue-50 rounded-xl"
+        class="flex items-center justify-between p-3 mb-3 shadow hover:shadow-lg bg-blue-50 rounded-xl"
       >
         <div class="flex items-center">
           <div
@@ -37,6 +37,9 @@
               <b class="text-red-500 share-tech">Angular</b> &
               <b class="text-blue-500 share-tech">Flutter</b>
             </div>
+						<div class="text-lg text-gray-800 oswald">
+							Disponible à partir du mois d'Août
+						</div>
           </div>
         </div>
         <div class="flex flex-col items-end justify-between h-full">
@@ -73,20 +76,22 @@
             >
               <div
                 *ngFor="let skillsGroup of skillsGroups"
-                class="flex-grow max-w-2xl px-3 rounded-xl"
+                class="flex-grow max-w-2xl px-3 my-6 rounded-xl"
               >
                 <div
-                  class="font-bold text-center share-tech"
+                  class="mb-3 font-bold text-center share-tech"
                   [innerText]="skillsGroup.name"
                 ></div>
-                <portfolio-skill-bar
-                  *ngFor="let skill of skillsGroup.skills"
-                  [skillName]="skill.name"
-                  [icon]="skill.icon"
-                  [color]="skill.color"
-                  [value]="skill.value"
-                  [bufferValue]="skill.bufferValue"
-                ></portfolio-skill-bar>
+								<div class="grid grid-cols-3 gap-4">
+									<portfolio-skill-bar
+										*ngFor="let skill of skillsGroup.skills"
+										[skillName]="skill.name"
+										[icon]="skill.icon"
+										[color]="skill.color"
+										[value]="skill.value"
+										[bufferValue]="skill.bufferValue"
+									></portfolio-skill-bar>
+								</div>
               </div>
             </div>
           </portfolio-cv-section>
@@ -101,6 +106,7 @@
                   [color]="language.color"
                   [value]="language.value"
                   [bufferValue]="language.bufferValue"
+									[vertical]="false"
                 ></portfolio-skill-bar>
               </div>
             </div>
@@ -177,13 +183,9 @@
                   >Solutions Logicielles et Applications Métier</em
                 >
               </p>
-              <ul class="pl-3 list-disc list-inside">
-                <li>
-                  Java : Bases, Android, Swing/JavaFX, API REST…
-                </li>
-                <li>PHP : Bases, API REST, Architecture 3 tiers…</li>
-                <li>SQL : Bases, Triggers, Vues, MCD/UML…</li>
-              </ul>
+              <!-- <p class="pl-3">
+                Java, PHP, SQL, Android
+              </p> -->
             </div>
             <div class="text-base">
               <h4 class="mb-1 text-red-900 roboto-condensed">
@@ -220,7 +222,7 @@
       <div class="flex items-center justify-around">
         <a
           *ngFor="let socialInfo of socialInfos"
-          class="flex flex-col items-center justify-between p-1 text-center bg-white hover:shadow-xl w-28 rounded-2xl"
+          class="flex flex-col items-center justify-between p-1 text-center bg-white rounded-lg shadow hover:shadow-lg w-28"
           [href]="socialInfo.link"
           target="_blank"
           rel="noopener noreferer"

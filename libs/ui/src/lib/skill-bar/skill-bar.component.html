@@ -1,9 +1,9 @@
-<div class="grid grid-cols-3 gap-4 w-60">
-  <p class="col-span-1 col-start-1 m-0 text-lg w-60 oswald">
+<ng-container *ngIf="vertical; else horizontal">
+  <p class="max-w-full m-0 mb-1 text-lg text-center w-60 oswald">
     <fa-icon [icon]="icon"></fa-icon>
     {{ skillName }}
   </p>
-  <div class="flex items-center col-start-2 col-end-4">
+  <div class="flex items-center">
     <mat-progress-bar
       [color]="color"
       [mode]="mode"
@@ -11,4 +11,21 @@
       [bufferValue]="bufferValue"
     ></mat-progress-bar>
   </div>
-</div>
+</ng-container>
+
+<ng-template #horizontal>
+  <div class="grid grid-cols-2 gap-4 w-60">
+    <p class="col-span-1 col-start-1 col-end-2 m-0 text-lg w-60 oswald">
+      <fa-icon [icon]="icon"></fa-icon>
+      {{ skillName }}
+    </p>
+    <div class="flex items-center col-start-2 col-end-3">
+      <mat-progress-bar
+        [color]="color"
+        [mode]="mode"
+        [value]="value"
+        [bufferValue]="bufferValue"
+      ></mat-progress-bar>
+    </div>
+  </div>
+</ng-template>
