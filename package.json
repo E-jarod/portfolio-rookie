@@ -6,7 +6,7 @@
     "ng": "nx",
     "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points",
     "nx": "nx",
-    "start": "ng serve --hmr --sourceMap=true --port 7777",
+    "start": "ng serve --hmr --port 7777",
     "build": "nx build portfolio",
     "build:prod": "yarn build --prod",
 		"build:stats": "yarn build --stats-json",

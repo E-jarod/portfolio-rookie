@@ -1,14 +1,18 @@
 <div class="flex justify-between">
   <h1 class="mat-h1">CV</h1>
-  <button
+  <a
     mat-raised-button
     color="warn"
     role="button"
-		disabled
-    (click)="print()"
+    href="assets/cv3.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+		download="CV_Ejilane_Jarod.pdf"
+		class="flex items-center"
+    (click)="open()"
   >
     Open PDF
-  </button>
+  </a>
 </div>
 
 <!-- 2480x3508 -->
@@ -99,7 +103,7 @@
           <!-- Languages -->
           <portfolio-cv-section [title]="'Langues'">
             <div class="flex-grow max-w-2xl px-3 rounded-xl">
-              <div *ngFor="let language of languages">
+              <ng-container *ngFor="let language of languages">
                 <portfolio-skill-bar
                   [skillName]="language.name"
                   [icon]="language.icon"
@@ -108,7 +112,7 @@
                   [bufferValue]="language.bufferValue"
 									[vertical]="false"
                 ></portfolio-skill-bar>
-              </div>
+              </ng-container>
             </div>
           </portfolio-cv-section>
         </div>

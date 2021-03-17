@@ -52,8 +52,8 @@ export class RootNavigationComponent {
     new RoutingLink(['/cv'], 'CV'),
     new RoutingLink(['/skills'], 'Compétences'),
     new RoutingLink(['/courses'], 'Formations'),
-    new RoutingLink(['/tech-watch'], 'Veille'),
-    new RoutingLink(['/contact'], 'Contact'),
+    // new RoutingLink(['/tech-watch'], 'Veille'),
+    // new RoutingLink(['/contact'], 'Contact'),
   ];
 	private _socialInfos: SocialInfo[] = [
 		new SocialInfo(

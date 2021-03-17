@@ -16,6 +16,7 @@ export class SkillBarComponent implements OnInit {
   @Input() bufferValue = 0;
 	@Input() icon: IconProp = 'code';
 	@Input() vertical = true;
+	@Input() noGrid = false;
 
   constructor() {}
 

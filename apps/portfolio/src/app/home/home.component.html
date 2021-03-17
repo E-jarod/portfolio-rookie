@@ -41,21 +41,21 @@
           class="flex justify-center flex-grow rounded-lg"
         >
           <div
-            class="flex flex-col justify-start flex-grow max-w-2xl p-3 m-0 xl:ml-8 rounded-xl bg-red-50 oswald"
+            class="flex flex-col items-center justify-center flex-grow max-w-2xl p-6 transition-all border shadow bg-red-50 hover:shadow-lg rounded-xl"
           >
-            <div class="grid grid-cols-1 gap-4">
+            <div *ngFor="let skill of skills" class="w-full my-2">
               <portfolio-skill-bar
-                *ngFor="let skill of skills"
                 [skillName]="skill.name"
                 [icon]="skill.icon"
                 [color]="skill.color"
                 [value]="skill.value"
                 [bufferValue]="skill.bufferValue"
-								[vertical]="false"
+                [vertical]="false"
+                [noGrid]="true"
               ></portfolio-skill-bar>
             </div>
           </div>
-          <mat-list
+          <!-- <mat-list
             class="flex-grow max-w-2xl p-3 rounded-xl bg-red-50 xl:ml-8"
           >
             <mat-list-item>
@@ -82,7 +82,7 @@
                 </mat-progress-bar>
               </div>
             </mat-list-item>
-          </mat-list>
+          </mat-list> -->
         </mat-card-content>
       </div>
     </mat-card>

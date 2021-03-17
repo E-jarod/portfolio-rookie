@@ -96,7 +96,9 @@ export class CvComponent {
     new InterestInfo('Cuisine Indienne', 'utensils'),
   ];
 
-  print(): void {}
+  open(): void {
+
+	}
 
   get targets(): string[] {
     return this._targets;
