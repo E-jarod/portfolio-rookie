@@ -12,8 +12,8 @@ import { CvSkill } from '../cv/cv.model';
 export class HomeComponent {
 	private _frameworksSkills: CvSkill[] = [
     new CvSkill('Angular', 50, 90, 'warn', ['fab', 'angular']),
-    new CvSkill('Vue', 30, 60, 'warn', ['fab', 'vuejs']),
     new CvSkill('Flutter', 20, 50, 'accent', 'dove'),
+    new CvSkill('Vue', 30, 60, 'warn', ['fab', 'vuejs']),
     new CvSkill('Android', 30, 50, 'primary', ['fab', 'android']),
   ];
 

@@ -1,29 +1,45 @@
 <h1 class="mat-h1">Compétences</h1>
-
-<mat-grid-list cols="4" rowHeight="100px">
-  <mat-grid-tile
-    *ngFor="let skill of skills | async"
-    [colspan]="skill.cols"
-    [rowspan]="skill.cols"
-  >
-    <mat-card class="dashboard-card" style="position: absolute">
-      <mat-card-header>
-        <mat-card-title>
-          <p class="m-0 text-lg w-60 oswald">
-            {{ skill.title }}
-            <!-- <fa-icon [icon]="['fab', 'angular']"></fa-icon> -->
-          </p>
-        </mat-card-title>
-      </mat-card-header>
+<!--
+<ng-container *ngFor="let skillsGroup of skillsGroups">
+  <h2>{{ skillsGroup.name }}</h2>
+  <ng-container *ngFor="let skill of skillsGroup.skills">
+    <mat-card class="flex-grow max-w-2xl px-3 my-6 rounded-xl">
       <mat-card-content class="dashboard-card-content">
-        <mat-progress-bar
-          [color]="skill.skill.color"
-          [mode]="'buffer'"
-          [value]="skill.skill.value"
-          [bufferValue]="skill.skill.bufferValue"
-        >
-        </mat-progress-bar>
+        <div class="grid grid-cols-3 gap-4">
+          <portfolio-skill-bar
+            [skillName]="skill.name"
+            [icon]="skill.icon"
+            [color]="skill.color"
+            [value]="skill.value"
+            [bufferValue]="skill.bufferValue"
+            [vertical]="false"
+          ></portfolio-skill-bar>
+        </div>
       </mat-card-content>
     </mat-card>
-  </mat-grid-tile>
-</mat-grid-list>
+  </ng-container>
+</ng-container> -->
+
+<div
+  class="flex flex-col justify-start flex-grow p-0 m-0 rounded-lg oswald"
+>
+  <div
+    *ngFor="let skillsGroup of skillsGroups"
+    class="flex-grow max-w-2xl px-3 my-6 rounded-xl"
+  >
+    <div
+      class="mb-3 font-bold text-center share-tech"
+      [innerText]="skillsGroup.name"
+    ></div>
+    <div class="grid grid-cols-3 gap-4">
+      <portfolio-skill-bar
+        *ngFor="let skill of skillsGroup.skills"
+        [skillName]="skill.name"
+        [icon]="skill.icon"
+        [color]="skill.color"
+        [value]="skill.value"
+        [bufferValue]="skill.bufferValue"
+      ></portfolio-skill-bar>
+    </div>
+  </div>
+</div>

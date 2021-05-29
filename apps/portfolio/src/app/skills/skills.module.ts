@@ -7,6 +7,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 // Components
 import { SkillsRoutingModule } from './skills-routing.module';
 import { SkillsComponent } from './skills.component';
+import { FontawesomeModule } from '@portfolio/shared';
+import { SkillBarModule } from '@portfolio/ui';
 
 const MaterialModules = [
   MatCardModule,
@@ -15,7 +17,12 @@ const MaterialModules = [
 ];
 
 @NgModule({
-  imports: [CommonModule, SkillsRoutingModule, ...MaterialModules],
+  imports: [
+    CommonModule,
+    SkillsRoutingModule,
+		SkillBarModule,
+    ...MaterialModules,
+  ],
   declarations: [SkillsComponent],
 })
 export class SkillsModule {}
