@@ -1,7 +1,7 @@
 <h1 class="mat-h1">Acceuil</h1>
 
 <!-- @TODO: Github Contributions API -->
-<mat-grid-list cols="1" rowHeight="320px">
+<mat-grid-list cols="1" rowHeight="380px">
   <mat-grid-tile
     class="border-red-500 shadow-2xl center"
     colspan="1"
@@ -18,8 +18,8 @@
             <mat-card-title class="text-2xl font-bold oswald">
               <h2 class="mat-h2">E-jarod</h2>
             </mat-card-title>
-            <mat-card-subtitle class="text-2xl oswald"
-              >Freelance développeur
+            <mat-card-subtitle class="text-2xl oswald">
+              Développeur freelance <br class="inline md:hidden" />
               <b class="text-red-500">Angular</b> &
               <b class="text-blue-500">Flutter</b>
             </mat-card-subtitle>
@@ -27,7 +27,7 @@
         </div>
       </mat-card-header>
       <div
-        class="flex flex-col justify-between xl:items-center xl:flex-row xl:mt-8"
+        class="flex flex-col justify-between flex-grow xl:items-center xl:flex-row xl:mt-8"
       >
         <img
           mat-card-image
@@ -41,6 +41,11 @@
           <div
             class="flex flex-col items-center justify-center flex-grow max-w-2xl p-6 transition-all border shadow bg-red-50 hover:shadow-lg rounded-xl"
           >
+            <span
+              class="block px-2 text-lg font-bold text-red-500 bg-red-100 rounded-full"
+            >
+              Compétences principales
+            </span>
             <div *ngFor="let skill of skills" class="w-full my-2">
               <portfolio-skill-bar
                 [skillName]="skill.name"
