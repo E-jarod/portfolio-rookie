@@ -1,26 +1,27 @@
 <h1 class="mat-h1">Compétences</h1>
-<!--
+
 <ng-container *ngFor="let skillsGroup of skillsGroups">
   <h2>{{ skillsGroup.name }}</h2>
-  <ng-container *ngFor="let skill of skillsGroup.skills">
-    <mat-card class="flex-grow max-w-2xl px-3 my-6 rounded-xl">
-      <mat-card-content class="dashboard-card-content">
-        <div class="grid grid-cols-3 gap-4">
-          <portfolio-skill-bar
-            [skillName]="skill.name"
-            [icon]="skill.icon"
-            [color]="skill.color"
-            [value]="skill.value"
-            [bufferValue]="skill.bufferValue"
-            [vertical]="false"
-          ></portfolio-skill-bar>
-        </div>
-      </mat-card-content>
-    </mat-card>
-  </ng-container>
-</ng-container> -->
+  <mat-card
+    *ngFor="let skill of skillsGroup.skills"
+    class="flex-grow max-w-2xl px-3 my-6 rounded-xl"
+  >
+    <mat-card-content class="dashboard-card-content">
+      <div class="grid grid-cols-3 gap-4">
+        <portfolio-skill-bar
+          [skillName]="skill.name"
+          [icon]="skill.icon"
+          [color]="skill.color"
+          [value]="skill.value"
+          [bufferValue]="skill.bufferValue"
+          [vertical]="false"
+        ></portfolio-skill-bar>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</ng-container>
 
-<div
+<!-- <div
   class="flex flex-col justify-start flex-grow p-0 m-0 rounded-lg oswald"
 >
   <div
@@ -42,4 +43,4 @@
       ></portfolio-skill-bar>
     </div>
   </div>
-</div>
+</div> -->
