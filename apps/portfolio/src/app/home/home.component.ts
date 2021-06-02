@@ -10,14 +10,15 @@ import { CvSkill } from '../cv/cv.model';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
-	private _frameworksSkills: CvSkill[] = [
-    new CvSkill('Angular', 50, 90, 'warn', ['fab', 'angular']),
-    new CvSkill('Flutter', 20, 50, 'accent', 'dove'),
+  readonly erenPP = "url('assets/eren_freedom_new_square_sm.png')";
+  private _frameworksSkills: CvSkill[] = [
+    new CvSkill('Angular', 60, 90, 'warn', ['fab', 'angular']),
+    new CvSkill('Flutter', 40, 70, 'accent', 'dove'),
     new CvSkill('Vue', 30, 60, 'warn', ['fab', 'vuejs']),
-    new CvSkill('Android', 30, 50, 'primary', ['fab', 'android']),
+    new CvSkill('Nestjs', 20, 50, 'primary', ['fab', 'node-js']),
   ];
 
-	get skills(): CvSkill[] {
+  get skills(): CvSkill[] {
     return this._frameworksSkills;
   }
 

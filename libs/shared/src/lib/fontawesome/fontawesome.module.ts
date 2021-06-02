@@ -36,6 +36,7 @@ import {
   faDatabase,
   faDove,
   faEnvelope,
+  faFeather,
   faGlobeAmericas,
   faGlobeAsia,
   faPaperPlane,
@@ -83,6 +84,7 @@ export class FontawesomeModule {
     faUtensils,
     faBook,
     faSass,
+    faFeather,
   ];
 
   constructor(library: FaIconLibrary) {
