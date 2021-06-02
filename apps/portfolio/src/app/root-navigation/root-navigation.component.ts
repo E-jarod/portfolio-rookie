@@ -20,9 +20,9 @@ class RoutingLink {
 }
 
 class SocialInfo {
-	constructor(
+  constructor(
     private socialLink: string,
-    private socialIcon: IconProp,
+    private socialIcon: IconProp
   ) {}
 
   get link(): string {
@@ -53,22 +53,19 @@ export class RootNavigationComponent {
     new RoutingLink(['/skills'], 'Compétences'),
     new RoutingLink(['/courses'], 'Formations'),
     // new RoutingLink(['/tech-watch'], 'Veille'),
-    // new RoutingLink(['/contact'], 'Contact'),
+    new RoutingLink(['/contact'], 'Contact'),
   ];
-	private _socialInfos: SocialInfo[] = [
-		new SocialInfo(
-      'https://github.com/E-jarod',
-      ['fab', 'github'],
-    ),
-    new SocialInfo(
-      'https://www.linkedin.com/in/e-jarod/',
-      ['fab', 'linkedin'],
-    ),
-    new SocialInfo(
-      'https://twitter.com/E_jarod7',
-      ['fab', 'twitter'],
-    ),
-	]
+  private _socialInfos: SocialInfo[] = [
+    new SocialInfo('https://github.com/E-jarod', ['fab', 'github']),
+    new SocialInfo('https://www.linkedin.com/in/e-jarod/', [
+      'fab',
+      'linkedin',
+    ]),
+    new SocialInfo('https://twitter.com/E_jarod7', [
+      'fab',
+      'twitter',
+    ]),
+  ];
 
   constructor(private breakpointObserver: BreakpointObserver) {}
 
@@ -76,7 +73,7 @@ export class RootNavigationComponent {
     return this._links;
   }
 
-	get socialInfos(): SocialInfo[] {
-		return this._socialInfos;
-	}
+  get socialInfos(): SocialInfo[] {
+    return this._socialInfos;
+  }
 }
