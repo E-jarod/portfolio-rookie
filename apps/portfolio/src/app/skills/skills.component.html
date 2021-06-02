@@ -2,12 +2,14 @@
 
 <ng-container *ngFor="let skillsGroup of skillsGroups">
   <h2>{{ skillsGroup.name }}</h2>
-  <mat-card
-    *ngFor="let skill of skillsGroup.skills"
-    class="flex-grow max-w-2xl px-3 my-6 rounded-xl"
+  <div
+    class="grid grid-cols-1 gap-4 lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-3"
   >
-    <mat-card-content class="dashboard-card-content">
-      <div class="grid grid-cols-3 gap-4">
+    <mat-card
+      *ngFor="let skill of skillsGroup.skills"
+      class="flex-grow max-w-2xl px-3 my-6 rounded-xl"
+    >
+      <mat-card-content class="dashboard-card-content">
         <portfolio-skill-bar
           [skillName]="skill.name"
           [icon]="skill.icon"
@@ -15,10 +17,11 @@
           [value]="skill.value"
           [bufferValue]="skill.bufferValue"
           [vertical]="false"
+          [noGrid]="true"
         ></portfolio-skill-bar>
-      </div>
-    </mat-card-content>
-  </mat-card>
+      </mat-card-content>
+    </mat-card>
+  </div>
 </ng-container>
 
 <!-- <div
