@@ -26,10 +26,6 @@ Using basic angular's `http://localhost:4200/` is a problem when we want to run 
 
 When navigating to localhost:7777, we can see the home page.
 
-## [Pre-prod] Test and run the app
-
-_..._
-
 ### Build the app
 
 _..._
