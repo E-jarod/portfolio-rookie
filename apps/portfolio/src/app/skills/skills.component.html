@@ -1,0 +1,102 @@
+<h1 class="mat-h1">Compétences</h1>
+
+<ng-container *ngFor="let skillsGroup of skillsGroups">
+  <h2>{{ skillsGroup.name }}</h2>
+  <div
+    class="grid grid-cols-1 gap-4 lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-3"
+  >
+    <mat-card
+      *ngFor="let skill of skillsGroup.skills"
+      class="flex-grow max-w-2xl px-3 my-4 rounded-xl"
+    >
+      <mat-card-content class="dashboard-card-content">
+        <portfolio-skill-bar
+          [skillName]="skill.name"
+          [icon]="skill.icon"
+          [color]="skill.color"
+          [value]="skill.value"
+          [bufferValue]="skill.bufferValue"
+          [vertical]="false"
+          [noGrid]="true"
+        ></portfolio-skill-bar>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</ng-container>
+
+<h2>Quelques projets</h2>
+<div class="grid grid-cols-1 grid-rows-1 gap-4 mt-6 md:grid-cols-2">
+  <div class="flex flex-col items-center justify-between mb-4">
+    <img
+      mat-card-image
+      class="flex-grow-0 flex-shrink-0 max-h-full mx-auto shadow-xl rounded-3xl w-60 xl:max-w-md sm:w-72 xl:w-80"
+      src="assets/vps_sam.png"
+      alt="VPS backend"
+    />
+    <p class="text-lg font-bold text-gray-600">
+      Configuration d'un backend nestjs sur un VPS
+    </p>
+  </div>
+  <div class="flex flex-col items-center justify-between mb-4">
+    <img
+      mat-card-image
+      class="flex-grow-0 flex-shrink-0 max-h-full mx-auto shadow-xl rounded-3xl w-60 xl:max-w-md sm:w-72 xl:w-80"
+      src="assets/veille_flutter.png"
+      alt="Veille sur Flutter"
+    />
+    <p class="text-lg font-bold text-gray-600">
+      Veille technologique sr Flutter
+    </p>
+  </div>
+  <div class="flex flex-col items-center justify-between mb-4">
+    <img
+      mat-card-image
+      class="flex-grow-0 flex-shrink-0 max-h-full mx-auto shadow-xl rounded-3xl w-60 xl:max-w-md sm:w-72 xl:w-80"
+      src="assets/ppe_admin.png"
+      alt="PPE panel admin"
+    />
+    <p class="text-lg font-bold text-gray-600">Panel admin Flutter</p>
+  </div>
+  <div class="flex flex-col items-center justify-between mb-4">
+    <img
+      mat-card-image
+      class="flex-grow-0 flex-shrink-0 max-h-full mx-auto shadow-xl rounded-3xl w-60 xl:max-w-md sm:w-72 xl:w-80"
+      src="assets/portfolio.png"
+      alt="Portfolio angular"
+    />
+    <p class="text-lg font-bold text-gray-600">
+      Portfolio Angular Material + TailwindCSS
+    </p>
+  </div>
+  <div class="flex flex-col items-center justify-between mb-4">
+    <img
+      mat-card-image
+      class="flex-grow-0 flex-shrink-0 max-h-full mx-auto shadow-xl rounded-3xl w-60 xl:max-w-md sm:w-72 xl:w-80"
+      src="assets/password_gen.png"
+      alt="Générateur de mdp Flutter"
+    />
+    <p class="text-lg font-bold text-gray-600">
+      Générateur de mot de passe en Flutter
+    </p>
+  </div>
+  <div class="flex flex-col items-center justify-between mb-4">
+    <img
+      mat-card-image
+      class="flex-grow-0 flex-shrink-0 max-h-full mx-auto shadow-xl rounded-3xl w-60 xl:max-w-md sm:w-72 xl:w-80"
+      src="assets/calculator.png"
+      alt="Calculatrice android Flutter"
+    />
+    <p class="text-lg font-bold text-gray-600">
+      Calculatrice en Flutter
+    </p>
+  </div>
+  <div class="flex flex-col items-center justify-between mb-4">
+    <img
+      mat-card-image
+      class="flex-grow-0 flex-shrink-0 max-h-full mx-auto shadow-xl rounded-3xl w-60 xl:max-w-md sm:w-72 xl:w-80"
+      src="assets/back_nestjs.png"
+      alt="Backend PPE nestjs"
+    />
+    <p class="text-lg font-bold text-gray-600">Backend nestjs</p>
+  </div>
+</div>

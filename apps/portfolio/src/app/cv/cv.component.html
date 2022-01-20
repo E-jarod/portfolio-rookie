@@ -1,0 +1,247 @@
+<div class="flex justify-between">
+  <h1 class="mat-h1">CV</h1>
+  <a
+    mat-raised-button
+    color="warn"
+    role="button"
+    href="assets/cv3.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+		download="CV_Ejilane_Jarod.pdf"
+		class="flex items-center"
+    (click)="open()"
+  >
+    Open PDF
+  </a>
+</div>
+
+<!-- 2480x3508 -->
+<div class="flex justify-center p-0">
+  <div class="transition-all shadow-lg hover:shadow-2xl">
+    <mat-card
+      id="cv"
+      class="flex flex-col justify-between w-full h-full bg-gray-200 roboto-condensed"
+    >
+      <div
+        class="flex items-center justify-between p-3 mb-3 shadow hover:shadow-lg bg-blue-50 rounded-xl"
+      >
+        <div class="flex items-center">
+          <div
+            class="flex-shrink-0 w-24 h-24 mr-3 bg-right bg-cover rounded-xl"
+            [style.backgroundImage]="
+              'url(\'assets/me20_square_sm.jpg\')'
+            "
+          ></div>
+          <div class="flex flex-col items-start justify-between">
+            <div class="text-2xl font-bold text-blue-900 roboto">
+              EJILANE Jarod
+            </div>
+            <div class="text-2xl text-gray-800 roboto-condensed">
+              Développeur
+              <b class="text-red-500 share-tech">Angular</b> &
+              <b class="text-blue-500 share-tech">Flutter</b>
+            </div>
+						<div class="text-lg text-gray-800 oswald">
+							Disponible à partir du mois d'Août
+						</div>
+          </div>
+        </div>
+        <div class="flex flex-col items-end justify-between h-full">
+          <div
+            *ngFor="let bannerInfo of bannerInfos"
+            class="text-lg font-bold text-gray-600 roboto"
+          >
+            {{ bannerInfo.data }}
+            <fa-icon [icon]="bannerInfo.icon"></fa-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-row justify-between h-full px-0">
+        <div class="flex-col col-span-1 pr-3">
+          <!-- Targets -->
+          <portfolio-cv-section [title]="'Objectifs'">
+            <ul class="text-base list-disc list-inside">
+              <li
+                *ngFor="let target of targets"
+                [innerHTML]="target"
+              ></li>
+            </ul>
+          </portfolio-cv-section>
+
+          <!-- Skills -->
+          <portfolio-cv-section
+            [title]="'Compétences'"
+            [isBgRed]="true"
+            [isRed]="true"
+          >
+            <div
+              class="flex flex-col justify-start flex-grow p-0 m-0 rounded-lg oswald"
+            >
+              <div
+                *ngFor="let skillsGroup of skillsGroups"
+                class="flex-grow max-w-2xl px-3 my-6 rounded-xl"
+              >
+                <div
+                  class="mb-3 font-bold text-center share-tech"
+                  [innerText]="skillsGroup.name"
+                ></div>
+								<div class="grid grid-cols-3 gap-4">
+									<portfolio-skill-bar
+										*ngFor="let skill of skillsGroup.skills"
+										[skillName]="skill.name"
+										[icon]="skill.icon"
+										[color]="skill.color"
+										[value]="skill.value"
+										[bufferValue]="skill.bufferValue"
+									></portfolio-skill-bar>
+								</div>
+              </div>
+            </div>
+          </portfolio-cv-section>
+
+          <!-- Languages -->
+          <portfolio-cv-section [title]="'Langues'">
+            <div class="flex-grow max-w-2xl px-3 rounded-xl">
+              <ng-container *ngFor="let language of languages">
+                <portfolio-skill-bar
+                  [skillName]="language.name"
+                  [icon]="language.icon"
+                  [color]="language.color"
+                  [value]="language.value"
+                  [bufferValue]="language.bufferValue"
+									[vertical]="false"
+                ></portfolio-skill-bar>
+              </ng-container>
+            </div>
+          </portfolio-cv-section>
+        </div>
+
+        <div class="flex-col col-span-2">
+          <!-- Experiences -->
+          <portfolio-cv-section [title]="'Expériences'">
+            <div class="mb-3 text-base">
+              <h4 class="mb-1 text-red-900 roboto-condensed">
+                <b>
+                  2019-2021 | PASS Technologie, Paris | Développeur
+                  Angular <em>(Alternance)</em>
+                </b>
+              </h4>
+              <ul class="pl-3 list-disc list-inside">
+                <li>
+                  Application desktop permettant une conception guidée
+                  de cloisons vitrées : gestion de l'UI/UX -
+                  <em class="text-sm">Angular & Electron</em>.
+                </li>
+                <li>
+                  Refonte du site web de Correlyce en Angular :
+                  gestion de l'UI, state management -
+                  <em class="text-sm">Angular</em>.
+                </li>
+              </ul>
+            </div>
+            <div class="text-base">
+              <h4 class="mb-1 text-red-900 roboto-condensed">
+                <b>
+                  2020-2021 | <em>Remote avec des amis</em> |
+                  Développeur JS
+                  <em>(Temps libre)</em>
+                </b>
+              </h4>
+              <!-- <p>2 Projets scolaires :</p> -->
+              <ul class="pl-3 list-disc list-inside">
+                <li>
+                  Panel d'administration : administration d'une
+                  application mobile React Native à l'aide Angular.
+                </li>
+                <li>
+                  Application de gestion d'associations : aide à la
+                  planification de certains choix. Rôle de développeur
+                  fullstack React/Nestjs.
+                </li>
+                <li>
+                  Application de chat en ligne cross-platform :
+                  organisateur, avec des amis, de tout le projet.
+                  Frontend en Flutter, backend en ASP.NET.
+                </li>
+              </ul>
+            </div>
+          </portfolio-cv-section>
+
+          <portfolio-cv-section [title]="'Formations'">
+            <div class="mb-2 text-base">
+              <h4 class="mb-1 text-red-900 roboto-condensed">
+                <b>
+                  2019-2021 | CFA INSTA, Paris 2e |
+                  <em>(En cours)</em>
+                </b>
+              </h4>
+              <p class="pl-1 mb-1">
+                <b>BTS SIO</b> -
+                <em class="text-sm"
+                  >Services Informatiques aux Organisations</em
+                >
+                <br />
+                | option <b>SLAM</b> -
+                <em class="text-sm"
+                  >Solutions Logicielles et Applications Métier</em
+                >
+              </p>
+              <!-- <p class="pl-3">
+                Java, PHP, SQL, Android
+              </p> -->
+            </div>
+            <div class="text-base">
+              <h4 class="mb-1 text-red-900 roboto-condensed">
+                <b> 2018-2019 | Lycée Jean Rostand, Villepinte </b>
+              </h4>
+              <p class="pl-1">
+                <b>Bac S</b> | option <b>SI</b> -
+                <em class="text-sm">Sciences de l'Ingénieur</em><br />
+                | spécialité <b>ISN</b> -
+                <em class="text-sm"
+                  >Informatique et Sciences du Numérique</em
+                ><br />
+                | Mention : <em><b>Bien</b></em>
+              </p>
+            </div>
+          </portfolio-cv-section>
+
+          <portfolio-cv-section [title]="'Centres d\'intérêts'">
+            <div
+              class="flex flex-wrap items-center justify-between text-base"
+            >
+              <div *ngFor="let interest of interests">
+                <fa-icon
+                  class="mr-1"
+                  [icon]="interest.icon"
+                ></fa-icon>
+                <span [innerText]="interest.name"></span>
+              </div>
+            </div>
+          </portfolio-cv-section>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-around">
+        <a
+          *ngFor="let socialInfo of socialInfos"
+          class="flex flex-col items-center justify-between p-1 text-center bg-white rounded-lg shadow hover:shadow-lg w-28"
+          [href]="socialInfo.link"
+          target="_blank"
+          rel="noopener noreferer"
+        >
+          <fa-icon
+            class="mb-2 text-3xl"
+            [ngClass]="socialInfo.color"
+            [icon]="socialInfo.icon"
+          ></fa-icon>
+          <span
+            class="font-bold roboto"
+            [innerText]="socialInfo.id"
+          ></span>
+        </a>
+      </div>
+    </mat-card>
+  </div>
+</div>

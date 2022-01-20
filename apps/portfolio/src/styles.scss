@@ -1,0 +1,83 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed&family=Share+Tech&display=swap');
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+.oswald {
+  font-family: 'Oswald', sans-serif !important;
+}
+
+.roboto {
+  font-family: 'Roboto', sans-serif !important;
+}
+
+.roboto-condensed {
+  font-family: 'Roboto', sans-serif !important;
+  font-family: 'Roboto Condensed', sans-serif !important;
+}
+
+.share-tech {
+  font-family: 'Roboto', sans-serif !important;
+  font-family: 'Roboto Condensed', sans-serif !important;
+  font-family: 'Share Tech', sans-serif !important;
+}
+
+.grid-container {
+  margin: 20px;
+}
+
+.dashboard-card {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+}
+
+.more-button {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+.dashboard-card-content {
+  text-align: center;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media print {
+  * {
+    visibility: hidden !important;
+  }
+  #cv {
+    position: absolute;
+    width: 21cm;
+    height: 29.7cm;
+    //margin: 30mm 45mm 30mm 45mm;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    * {
+      visibility: visible !important;
+    }
+    /* change the margins as you want them to be. */
+  }
+}
